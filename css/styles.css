@@ -1,90 +1,216 @@
 @import url('https://fonts.googleapis.com/css2?family=Antic+Slab&display=swap');
 
-
 body{
+    padding: 0;
     margin: 0;
-}
-
-.contenedor{
-    display: flex;
-
-}
-
-header{
-
-    background-color: #000000;
-    display: flex;
-    z-index: 200;
-    justify-content: space-between;
-    flex-direction: column; 
-    align-items: center;
-    min-height: 100vh;
-    width: 135px;
-    padding: 0px 20px 0px 12px;
-    position: fixed;
-    border-bottom: 8px solid var(--border-color);
-    top: 0;
-    left: 0;
-
-}
-
-header .logo img{
-    height: 130px;
-    width: 130px;
-    transition: all 0.3s;
-    margin: 20px 0px 20px 0px;
-}
-
-
-header .logo{
-    cursor: pointer;
-}
-
-header .logo:hover{
-    transform: scale(1.1);
-}
-
-#areglosnav p{
-    color: rgb(203, 209, 215);
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 40px;
-    font-family: "Antic Slab", serif;
-}
-
-
-.iconos a{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: rgb(203, 209, 215);
-    font-family: "Antic Slab", serif; 
-    transition: all 0.3s;
-    padding: 0px 0px 15px 0px;
+    background-color: #eeebebc9;
     
 }
 
-.iconos a:hover{
-    transform: scale(1.1);
-
+header{
+    background-color: #b3b1b1;
+    z-index: 200;
+    height: 55px;
+    padding: 0px 20px 0px 12px;
 }
 
-.iconos img{
+.areglosnav{
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
+    
+}
+.areglosnav nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.areglosnav  a{
+    display: flex;
+    align-items: center; 
+    gap: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    font-family: "Antic Slab", serif; 
+    transition: all 0.3s;
+}
+
+.areglosnav a:hover{
+    transform: scale(1.1);
+}
+
+.areglosnav nav a img{
     width: 1.5rem;
     margin: 0.5rem;
 }
-
-
-
-.infomacion{
-    flex:  1;
-    padding: 0px 0px 0px 190px;
-    min-height: 100vh;
-    background-color: #04060af9;
-    color: aliceblue;
+.areglosnav p{
+    color: black;
+    font-size: 19px;
+    font-family: "Antic Slab", serif; 
+    transition: all 0.3s;
 }
 
-h2{
+.areglosnav p:hover{
+    transform: scale(1.1);
+}
+
+
+/*pagina inicio*/
+h1{
+    color: black;
+    font-size: 39px;
+    font-family: "Antic Slab", serif; 
     text-align: center;
 }
 
+.videoIncio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: navy;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    width: 800px;
+    height: 370px;
+    margin: 0 auto;
+
+}
+
+.targetasInicio{
+    width: 800px;
+    height: 300px;
+    padding: 0px 20px 10px 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    gap: 17px;
+    
+}
+
+#targetaInicio1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 18rem;
+    background-color: rgb(179, 104, 19);
+    margin: auto;
+}
+
+#targetaInicio2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25rem;
+    height: 18rem;
+    background-color: rgb(219, 238, 11);
+    margin: auto;
+}
+
+.piedPagina{
+    text-align: center;
+    font-family: "Antic Slab", serif; 
+    background-color: #b3b1b1;
+    padding: 11px;
+}
+
+/*Pagina portafolio*/
+
+.contenedorPagina2{
+    margin-bottom: 50px;
+}
+
+.textVideo1P2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    width: 999px;
+    height: 370px;
+    margin: 0 auto;
+    gap: 17px;
+}
+#Video1P2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(128, 47, 0);
+    width: 35rem;
+    height: 23rem;
+}
+
+#text1P2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(202, 207, 55);
+    width: 26rem;
+    height: 23rem;
+    
+}
+
+.linea {
+  width: 995px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.279);
+  margin: 15px auto;
+}
+
+.proyectoCompletos{
+    background-color: rgb(67, 161, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+    width: 999px;
+    height: 370px;
+    margin: 0 auto;
+    gap: 17px; 
+    margin-top: 15px;
+}
+#Video2P2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(128, 47, 0);
+    width: 35rem;
+    height: 23rem;
+}
+
+#targeta1P2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(128, 47, 0);
+    width: 25rem;
+    height: 23rem;
+}
+
+#text2P2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(128, 47, 0);
+    width: 20rem;
+    height: 23rem;
+   
+}
+
+
+/*pagina acerca de mi*/
+
+.contenedorPagina3{
+    margin-bottom: 50px;
+}
+
+.textAcercaMi{
+    background-color: blue;
+    width: 700px;
+    height: 700px;
+    margin: 0 auto;
+}
+
+
+/*cv*/
