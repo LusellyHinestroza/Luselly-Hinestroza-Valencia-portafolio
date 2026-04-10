@@ -7,8 +7,8 @@ body{
     
 }
 
+
 header{
-    background-color:#141A32;
     z-index: 200;
     height: 55px;
     padding: 0px 20px 0px 12px;
@@ -64,6 +64,7 @@ h1{
     font-size: 39px;
     font-family: "Antic Slab", serif; 
     text-align: center;
+    
 }
 
 .videoIncio{
@@ -75,7 +76,15 @@ h1{
     width: 800px;
     height: 370px;
     margin: 0 auto;
+     overflow: hidden;
 
+}
+
+
+.videoIncio video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .targetasInicio{
@@ -196,7 +205,7 @@ h1{
 #mejora1{
     color: rgb(102, 56, 56);
     text-align: center;
-     margin-top: 15rem;
+    margin-top: 15rem;
 
 }
 
@@ -259,9 +268,121 @@ h1{
     border-radius: 12px;
     box-shadow: 0px 0px 10px #1E2747;
     width: 700px;
-    height: 700px;
+    height: 500px;
     margin: 0 auto;
+    overflow: hidden;
+    
+    
+}
+
+.objetivo  {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    color: rgb(142, 137, 137);
+    width: 39rem;
+    height: 20px;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: justify;
+    font-weight: 540;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+#objetivoCambiacolor{
+      color: rgb(102, 56, 56);
+}
+
+.Video1P3{
+    margin: 15px auto;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px #1E2747;
+    width: 25rem;
+    height: 13rem;
+    overflow: hidden;
+}
+
+.Video1P3 video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*cv*/
+.cards{
+    display: flex;
+   
+   
 }
 
 
-/*cv*/
+.card{
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px #7b7d83;
+}
+
+
+.card-img-top{
+    object-fit: cover;
+    border-radius: 16px;
+    width: 280px;
+    margin-top: 3px;
+    height: 180px;
+}
+
+.text-center{
+    color: #020305;
+    font-size: 22px !important;
+    letter-spacing: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: escribir 3s steps(40) forwards, parpadeo 0.6s infinite;
+}
+
+@keyframes escribir {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+ 
+
+.card-text{
+    font-size: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+}
+
+
+.list-unstyled{
+    text-align: justify;
+    margin-top: 10px;
+    margin: 12px 12px 12px 12px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.urls{
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+.btn-sm{
+    background-color: #080F28;
+    border: none;
+    display: block;
+    margin: auto;
+    width: 250px;
+    font-size: 18px;
+    
+}
+
+.btn-sm:hover{
+    box-shadow: 1px 1px 7px #a65110fa;
+    background-color: #a65110ef ;
+}
+
+
