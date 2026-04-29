@@ -4,40 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio luselly</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
 </head>
 <body>
     
     <header>
         <div class="areglosnav">
-            <nav>
-                
-                <a href="index.html"><img src="./imagenes/inicio.png" alt="inicio">Inicio</a>
-                <a href="./html/portafolio.html"><img src="./imagenes/portafolio.png" alt="portafolio">Portafolio</a>
-                <a href="./html/acercaMi.html"><img src="./imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
-                <a href="./html/cv.html"><img src="./imagenes/cv.png" alt="cv">Secion de CV</a>
+            <div class="menu-resP" onclick="menuResponse()">☰</div>
+            <nav class="menu" id="menu">
+                <a href="index.html"><img src="../imagenes/inicio.png" alt="inicio">Inicio</a>
+
+                <a href="./html/portafolio.html"><img src="../imagenes/portafolio.png" alt="portafolio">Portafolio</a>
+
+                <a href="./html/acercaMi.htmls  "><img src="../imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
+
+                <a href="./html/cv.html"><img src="../imagenes/cv.png" alt="cv">Secion de CV</a>
                 
             </nav>
-            <p>Luselly Hinestroza Valencia</p>
+            <p class="nombre">Luselly Hinestroza Valencia</p>
         </div>      
     </header>
 
-    <h1>Bienvenidos</h1>
-    <div class="videoIncio">
-        <video autoplay >
-            <source src="./imagenes/videoprincipal.mp4" type="video/mp4">
-        </video>
 
-    </div>
-
-    <div class="targetasInicio">
-        <div id="targetaInicio1"><p>Proyecto</p></div>
-        <div id="targetaInicio2"><p>Proyecto</p></div>
-    </div>
-    
-    <footer class="piedPagina">
-        <p>© 2026 Mi página web</p>
-    </footer>
 
     <script src="./app.js"></script>
 </body>

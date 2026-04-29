@@ -1,0 +1,543 @@
+
+body{
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100vh;
+    background-color: #010509;
+    
+}
+
+
+.areglosnav{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 100%; 
+    padding: 10px; 
+    height: 40px;
+
+}
+
+
+.menu{
+    display: flex;
+    gap: 20px;
+  
+}
+
+.menu  a{
+    text-decoration: none;
+    display: flex;
+    align-items: center; 
+    gap: 6px;
+    text-decoration: none;
+    color: rgb(188, 186, 186);
+    font-size: 19px;
+    font-family: "Antic Slab", serif; 
+    transition: all 0.3s;
+}
+
+
+.menu a:hover{
+    transform: scale(1.1);
+    text-shadow: 0px 1px 5px rgb(255, 255, 255);
+}
+
+.menu-resP{
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+.menu img{
+    width: 1.5rem;  
+}
+.nombre{
+    color: rgb(188, 186, 186);
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Antic Slab", serif; 
+    transition: all 0.3s;
+    margin: 0px 20px 0px 0px;
+}
+
+.nombre:hover{
+    transform: scale(1.1);
+}
+
+
+
+/*cv..............................................................................................*/
+
+/*estudios*/
+
+.contenedor1{
+    display: block; 
+}
+
+.fondoEstudios{
+    background-color: #010509;
+    margin-top: 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3rem;
+    opacity: 0.7;
+   
+}
+
+.burbuja {
+    filter: url(#efecto-agua);
+    animation: flotar 4s ease-in-out infinite;
+}
+
+
+.burbuja::after{
+    content: '';
+    inset: 0;
+    background: 
+    radial-gradient(circle at 25% 40%,#010509 0%, transparent 40%);
+    
+    animation: subir-burbujas 20s linear infinite;
+  }
+  @keyframes flotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+  }
+  @keyframes subir-burbujas {
+    from { background-position: 0% 100%; }
+    to { background-position: 0% 0%; }
+  }
+
+.fondo {
+  background: linear-gradient(to bottom,#010509, #061418, #2c5364);
+    
+}
+
+
+.generation{
+    height: 285px;
+    margin: 20px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;   
+    background-color: #000000;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+    animation: flotar 3s ease-in-out infinite;
+}
+@keyframes flotar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px); /* sube */
+  }
+  100% {
+    transform: translateY(-1px); /* baja */
+  }
+}
+.generation1{
+    height: 285px;
+    margin: 20px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;   
+    background-color: #000000;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.generation2{
+    height: 285px;
+    margin: 20px;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;   
+    background-color: #000000;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.generation h2{
+    text-align: center;
+    color: #12e7ff;
+    font-weight: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    opacity: 0.6;
+}
+.generation1 h2{
+    text-align: center;
+    color: #12e7ff;
+    font-weight: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    opacity: 0.6;
+}
+
+.generation2 h2{
+    text-align: center;
+    color: #12e7ff;
+    font-weight: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+    opacity: 0.6;
+}
+
+
+.generation h3{
+    font-size: 19px;
+    color: #acadb0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.generation1 h3{
+    font-size: 19px;
+    color: #acadb0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.generation2 h3{
+    font-size: 19px;
+    color: #acadb0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.generation p{
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    color: #ffffff9f;
+
+}
+
+.generation1 p{
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    color: #ffffff9f;
+
+}
+
+.generation2 p{
+    text-align: center;
+    padding: 5px;
+    font-size: 10px;
+    color: #ffffff9f;
+
+}
+
+
+.botoneGeratios{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botoneGeratios .generationBoton{
+    border-radius: 12px;
+    background-color: transparent;
+    border: solid 0.50px #acadb0;
+    padding: 5px;
+    width: 190px;
+    color: #acadb0;
+    font-size: 12px;
+
+
+}
+
+.botoneGeratios .generationBoton:hover{
+    
+    cursor: pointer;
+    box-shadow: 0px 0px 5px #fff;
+    text-shadow: 0px 0px 5px #91b6c3;
+}
+/*fin de estudios*/
+
+
+
+
+
+
+/*abilidades*/
+.fondo {
+  position: relative; /* Necesario para que las burbujas queden detrás */
+  overflow: hidden; /* Las burbujas no se salen */
+
+}
+
+
+.fondoh1{
+    padding: 20px;
+}
+
+h5, h1{
+   
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+    font-size: 3rem;
+    font-weight:  5000;
+    color: #fffbfbde;
+    opacity: 0.5;
+    
+    text-shadow: 
+    0 0 15px rgba(0, 229, 255, 0.9),
+    0 0 30px rgba(10, 10, 10, 0.656),
+    0 0 10px rgba(0, 251, 255, 0.577);
+
+    filter: url(#efecto-agua);
+    position: relative;
+}
+
+.fondoh1 h1::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+    radial-gradient(circle at 25% 40% rgba(255,225,255,0.5) 0% transparent 2.5%),
+    radial-gradient(circle at 70% 65% rgba(255,225,255,0.4) 0% transparent 2%);
+    mix-blend-mode: overlay;
+    animation: subir-burbujas 5s linear infinite;
+  }
+ 
+  @keyframes subir-burbujas {
+    from { background-position: 0% 100%; }
+    to { background-position: 0% 0%; }
+  }
+
+
+.burbujas {
+  position: absolute;
+  top: 50px; 
+  left: 0;
+  width: 100%; 
+  height: 70%;
+  z-index: 0; /* o -1 */
+  pointer-events: none;
+}
+
+
+.burbuja {
+  position: absolute;   
+  bottom: -30%;
+  background: rgba(0, 191, 255, 0.1);
+  border: 1px solid rgba(215, 238, 246, 0.547);
+  border-radius: 50%;
+  animation: subir 20s infinite ease-in;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+
+/*tamaños de las borbujas*/
+.burbuja:nth-child(1) { width: 40px; height: 40px; left: 5%; animation-duration:10s; }
+.burbuja:nth-child(2) { width: 20px; height: 20px; left: 15%; animation-duration: 20s; animation-delay: 1s; }
+.burbuja:nth-child(3) { width: 60px; height: 60px; left: 30%; animation-duration: 30s; animation-delay: 2s; }
+.burbuja:nth-child(4) { width: 80px; height: 80px; left: 45%; animation-duration: 10s; }
+.burbuja:nth-child(5) { width: 25px; height: 25px; left: 55%; animation-duration: 25s; animation-delay: 1s; }
+.burbuja:nth-child(6) { width: 45px; height: 45px; left: 70%; animation-duration: 20s; animation-delay: 3s; }
+.burbuja:nth-child(7) { width: 90px; height: 90px; left: 80%; animation-duration: 10s; animation-delay: 4s; }
+.burbuja:nth-child(8) { width: 30px; height: 30px; left: 90%; animation-duration: 10s; animation-delay: 2s; }
+
+
+@keyframes subir {
+
+  10% {
+    transform: translateX(100px);
+    opacity: 1;
+    
+  }
+  100% {
+    bottom: 90%;
+    transform: translateX(-90px);
+    opacity: 0;
+  }
+}
+
+.abilidades{
+    margin-top: 10px;
+    
+}
+.cardEstudios{
+    width: 250px;
+    height: 329px;
+    background-color: transparent;
+    border-radius: 12px;
+    display: block;
+    animation: flotar 4s ease-in-out infinite;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative; /* Necesario para que las burbujas queden detrás */
+
+}
+
+@keyframes flotar {
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+}
+.abilidad{
+    height: 200px;
+    width: 130px;
+    box-shadow: 0px 0px 20px #000000cf;
+    border: solid 1px #647a84;
+    background-color: #0d2a35;
+    backdrop-filter: blur(5px);
+    margin: 80px auto 0;
+    position: relative;
+    border-radius: 12px;
+    display: block;
+    padding: 5px;
+    overflow: hidden;
+    transition: transform 0.4s ease; /* más suave */
+}
+
+
+.abilidad.active {
+  transform: translateY(-67px); /* simula subir */
+  border: solid 1px #647a84;
+}
+
+.imagenesCards{
+    width: 119px;
+    height: 110px;
+    border-radius: 12px;
+    overflow: hidden;
+     margin: 0 auto;
+}
+
+.imagenesCards img{
+   width: 119px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linea{
+    background-color: #f6fafb;
+    height: 0.03px;
+    opacity: 0.4;
+}
+
+.textoCards{
+    display: block;
+}
+
+.textoCards p{
+    margin-top: 2px;
+    color: #fbfbfb;
+    font-weight: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 0px 0px 2px #0c0c0c;
+    opacity: 0.9;
+    font-size: 17px;
+    margin: 5px;
+}
+
+.textoCards button{
+   background-color: #054461;
+   box-shadow: 0px 0px 1px #e4e6e7;
+   border: none;
+   width: 90px;
+   height: 28px;
+   border-radius: 12px;
+   text-align: center;
+   color: #f7f8f8;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   margin-top: 10px;
+   padding: 0;
+   font-size: 13px;
+}
+
+
+.informacioCards{
+    background-color: #0d2a35;
+    box-shadow: 0px 0px 20px #000000cf;
+    border: solid 1px #647a84;
+    backdrop-filter: blur(5px);
+    width: 210px;
+    height: 80px;
+    position: absolute;
+    bottom:  7px;
+    margin-bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 12px;
+    padding: 5px;
+    overflow: hidden;
+  
+}
+.informacioCards:hover{
+    box-shadow: 0px 0px 3px #87d0d0;
+    cursor: pointer;
+    
+}
+
+
+.informacioCards p{
+    font-size: 11px;
+    padding: 7px;
+    width: 199px;
+    margin: 0 auto;
+    color: #d1cece;
+}
+
+
+.burbujas1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Burbujas pequeñas */
+.burbuja1 {
+  position: absolute;
+  bottom: -50px;
+  background: rgba(0, 191, 255, 0.2);
+  border-radius: 50%;
+  animation: subir1 10s linear infinite;
+}
+
+/* Animación */
+@keyframes subir1 {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+     bottom: 50%;
+    transform: translateX(-90px);
+    opacity: 0;
+  }
+}
+

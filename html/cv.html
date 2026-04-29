@@ -1,85 +1,327 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet"
      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <title>Portafolio luselly</title>
-    <link rel="stylesheet" href="../styles.css">
+     <title>Portafolio luselly</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
+        
     
+    <!--yo cree la nav-->
     <header>
         <div class="areglosnav">
-            <nav>
-                
+            <div class="menu-resP" onclick="menuResponse()">☰</div>
+            <nav class="menu" id="menu">
                 <a href="../index.html"><img src="../imagenes/inicio.png" alt="inicio">Inicio</a>
                 <a href="portafolio.html"><img src="../imagenes/portafolio.png" alt="portafolio">Portafolio</a>
                 <a href="acercaMi.html"><img src="../imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
                 <a href="cv.html"><img src="../imagenes/cv.png" alt="cv">Secion de CV</a>
                 
             </nav>
-            <p>Luselly Hinestroza Valencia</p>
+            <p class="nombre">Luselly Hinestroza Valencia</p>
         </div>      
     </header>
+    
+   
 
-    <div class="cvgorro">
-        <img src="../imagenes/patafoliocv.png" alt="">
-    </div>
+    <!--Estudios Realizados-->
+   
+    
+        
+    <section class="agua1">
+        <div class="fondoEstudios">
+                
+            <h1>ESTUDIOS REALIZADOS</h1> 
+            <div class="contenedor1">
+                <div class="container text-center">
+                    <div class="row align-items-start">
+                        <div class="col">
+                            <div class="generation1">
+                                <h2>Tecnico en sistemas</h2>
+                                <h3>Sena</h3>
+                                <p>
+                                    Durante mi formación en el SENA como Técnica en Sistemas, adquirí conocimientos
+                                    en mantenimiento preventivo de equipos de cómputo,  también desarrollé
+                                    habilidades en diagnóstico y solución de fallas, optimización del rendimiento de
+                                    los equipos y soporte técnico al usuario. Esta experiencia me permitió
+                                    fortalecer mi capacidad de análisis, organización y servicio, preparándome para
+                                    brindar soluciones efectivas en entornos tecnológicos.
+                                </p>
+                        
 
-    <!--cards-->
-    <div class="cards">
-        <div class="card" style="width: 18rem;">
-            <img src="../imagenes/Gorro de graduación con borla dorada.png" class="card-img-top" alt="Progrmacion">
-            <div class="card-body">
-                <h1 class="fw-bold fs-3 text-center">Educacion</h1>
-                <p class="card-text">Desarrolladores Junior Full-Stack/Java</p>
-                <button type="button" class="btn btn-primary btn-sm" onclick="ir('https://github.com/LusellyHinestroza')">GitHub</button>
+                                <div class="botoneGeratios">
+                                    <button class="generationBoton" onclick="irEnlaces('https://betowa.sena.edu.co/oferta')">Más sobre Sena</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                             <div class="generation">
+                                <h2>Junior Full-Stack/Java</h2>
+                                <h3>Generation Colombia</h3>
+                                <p>
+                                    El programa de Generation Colombia me permitió fortalecer habilidades técnicas
+                                    en HTML, CSS, JavaScript, Python, Bootstrap, Java, SQL y Git/GitHub, además de
+                                    competencias blandas como comunicación, liderazgo y trabajo en equipo en
+                                    entornos ágiles. Uno de los proyectos más relevantes fue el desarrollo de un
+                                    eCommerce en equipo, donde apliqué consumo de APIs, organización de catálogos y
+                                    construcción de interfaces funcionales. Esta experiencia consolidó mi perfil
+                                    como Desarrolladora Junior Full-Stack/Java, abriéndome camino en la industria
+                                    tecnológica con confianza y compromiso.
+                                </p>
+                                
 
-                <p class="list-unstyled">
-                    Estoy apasionada por el desarrollo web. Me gusta pensar en
-                    soluciones y transformar mis ideas en proyectos. Doy lo mejor de
-                    mí en todo momento, cuidando cada detalle para lograr resultados
-                    de calidad.
-                </p>
+                                <div class="botoneGeratios">
+                                    <button class="generationBoton">Explorar Proyectos</button>
+                                    <button class="generationBoton" onclick="irEnlaces('https://colombia.generation.org/encuentra-un-programa/')">Más sobre Generation</button>
+                                </div>
+                             </div>
+                        </div>
+                
+                        <div class="col">
+                            <div class="generation2">
+                                <h2>Auxiliar de Caja</h2>
+                                <h3>Talento Global</h3>
+                                <p>
+                                    Durante mi formación en Talento Global adquirí competencias
+                                    prácticas en el manejo de caja registradora, control de pagos
+                                    electrónicos, así como en la atención al cliente en
+                                    supermercados y comercios. Brindar un servicio amable y
+                                    eficiente. Esta experiencia me permitió desarrollar
+                                    habilidades de comunicación, organización y responsabilidad,
+                                    esenciales para desempeñarse en entornos comerciales y de
+                                    servicio al público.
+                                </p>
+                        
+
+                                <div class="botoneGeratios" onclick="irEnlaces('https://corporaciontalentoglobal.com/#donde-econtrarnos')">
+                                    <button class="generationBoton">Más sobre Talento</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            
+             <div class="burbujas">
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"><div class="burbuja"><div class="burbuja"></div><div class="burbuja"></div></div></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"><div class="burbuja"><div class="burbuja"></div><div class="burbuja"></div></div></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"><div class="burbuja"><div class="burbuja"></div><div class="burbuja"></div></div></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"><div class="burbuja"><div class="burbuja"></div><div class="burbuja"></div></div></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+            </div>
+            <div class="burbujas1">
+                <span class="burbuja1" style="left: 10%; width: 8px; height: 8px; animation-duration: 8s;"></span>
+                <span class="burbuja1" style="left: 20%; width: 6px; height: 6px; animation-duration: 12s;"></span>
+                <span class="burbuja1" style="left: 30%; width: 10px; height: 10px; animation-duration: 9s;"></span>
+                <span class="burbuja1" style="left: 40%; width: 5px; height: 5px; animation-duration: 11s;"></span>
+                <span class="burbuja1" style="left: 50%; width: 7px; height: 7px; animation-duration: 7s;"></span>
+                <span class="burbuja1" style="left: 60%; width: 9px; height: 9px; animation-duration: 10s;"></span>
+                <span class="burbuja1" style="left: 70%; width: 6px; height: 6px; animation-duration: 13s;"></span>
+                <span class="burbuja1" style="left: 80%; width: 8px; height: 8px; animation-duration: 9s;"></span>
+                <span class="burbuja1" style="left: 90%; width: 5px; height: 5px; animation-duration: 12s;"></span>
             </div>
         </div>
+    </section>
 
-        <div class="card" style="width: 18rem;">
-            <img src="../imagenes/Gorro de graduación con borla dorada.png" class="card-img-top" alt="Progrmacion">
-            <div class="card-body">
-                <h1 class="fw-bold fs-3 text-center">.....</h1>
-                <p class="card-text">Desarrolladores Junior Full-Stack/Java</p>
-                <button type="button" class="btn btn-primary btn-sm" onclick="ir('https://github.com/LusellyHinestroza')">GitHub</button>
-
-                <p class="list-unstyled">
-                    Estoy apasionada por el desarrollo web. Me gusta pensar en
-                    soluciones y transformar mis ideas en proyectos. Doy lo mejor de
-                    mí en todo momento, cuidando cada detalle para lograr resultados
-                    de calidad.
-                </p>
-            </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-            <img src="../imagenes/Gorro de graduación con borla dorada.png" class="card-img-top" alt="Progrmacion">
-            <div class="card-body">
-                <h1 class="fw-bold fs-3 text-center">Abilidades</h1>
-                <p class="card-text">Desarrolladores Junior Full-Stack/Java</p>
-                <button type="button" class="btn btn-primary btn-sm" onclick="ir('https://github.com/LusellyHinestroza')">GitHub</button>
-
-                <p class="list-unstyled">
-                    Estoy apasionada por el desarrollo web. Me gusta pensar en
-                    soluciones y transformar mis ideas en proyectos. Doy lo mejor de
-                    mí en todo momento, cuidando cada detalle para lograr resultados
-                    de calidad.
-                </p>
-            </div>
-        </div>
-    </div>
+            
+        
     
 
-    <script src="../app.js"></script>
+    <!--esperiencias-->
+    
+       
+    
+    <section class="seccion agua2">
+         <div class="fondo">
+            
+            <div class="fondoh1">
+                <h1>HABILIDADES</h1>
+            </div>
+            
+            <svg width="0" height="0" style="position:absolute">
+                <filter id="efecto-agua">
+                    <feTurbulence type="turbulence" baseFrequency="0.01 0.04" numOctaves="2" result="turbulencia" seed="3">
+                        <animate attributeName="baseFrequency" dur="8s" values="0.01 0.04;0.02 0.08;0.01 0.04" repeatCount="indefinite"/>
+                    </feTurbulence>
+                    <feDisplacementMap in="SourceGraphic" in2="turbulencia" scale="12" />
+                </filter>
+            </svg> 
+            
+            <div class="abilidades" style="margin-bottom: 50px;">
+             
+                <div class="container text-center">
+                    <div class="row align-items-start g-4">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                            <div class="cardEstudios">
+                                <div class="abilidad subirCard">
+                                    <div class="imagenesCards">
+                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                    </div>
+                                    <div class="linea"></div>
+                                    <div class="textoCards">
+                                        <p>Explorar</p>
+                                        <button>Proyectos</button>
+                                    </div>
+                                </div>
+                                <div class="informacioCards" id="informacioCards">
+                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                            <div class="cardEstudios">
+                                <div class="abilidad subirCard">
+                                    <div class="imagenesCards">
+                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                    </div>
+                                    <div class="linea"></div>
+                                    <div class="textoCards">
+                                        <p>Explorar</p>
+                                        <button>Proyectos</button>
+                                    </div>
+                                </div>
+                                <div class="informacioCards" id="informacioCards">
+                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                            <div class="cardEstudios">
+                                <div class="abilidad subirCard">
+                                    <div class="imagenesCards">
+                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                    </div>
+                                    <div class="linea"></div>
+                                    <div class="textoCards">
+                                        <p>Explorar</p>
+                                        <button>Proyectos</button>
+                                    </div>
+                                </div>
+                                <div class="informacioCards" id="informacioCards">
+                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                              <div class="cardEstudios">
+                                <div class="abilidad subirCard">
+                                    <div class="imagenesCards">
+                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                    </div>
+                                    <div class="linea"></div>
+                                    <div class="textoCards">
+                                        <p>Explorar</p>
+                                        <button>Proyectos</button>
+                                    </div>
+                                </div>
+                                <div class="informacioCards" id="informacioCards">
+                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                              <div class="cardEstudios">
+                                <div class="abilidad subirCard">
+                                    <div class="imagenesCards">
+                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                    </div>
+                                    <div class="linea"></div>
+                                    <div class="textoCards">
+                                        <p>Explorar</p>
+                                        <button>Proyectos</button>
+                                    </div>
+                                </div>
+                                <div class="informacioCards" id="informacioCards">
+                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                              <div class="cardEstudios">
+                                <div class="abilidad subirCard">
+                                    <div class="imagenesCards">
+                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                    </div>
+                                    <div class="linea"></div>
+                                    <div class="textoCards">
+                                        <p>Explorar</p>
+                                        <button>Proyectos</button>
+                                    </div>
+                                </div>
+                                <div class="informacioCards" id="informacioCards">
+                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                              <div class="cardEstudios">
+                                <div class="abilidad subirCard">
+                                    <div class="imagenesCards">
+                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                    </div>
+                                    <div class="linea"></div>
+                                    <div class="textoCards">
+                                        <p>Explorar</p>
+                                        <button>Proyectos</button>
+                                    </div>
+                                </div>
+                                <div class="informacioCards" id="informacioCards">
+                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        
+            <div class="burbujas">
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"><div class="burbuja"><div class="burbuja"></div><div class="burbuja"></div></div></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"><div class="burbuja"><div class="burbuja"></div><div class="burbuja"></div></div></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"><div class="burbuja"><div class="burbuja"></div><div class="burbuja"></div></div></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"><div class="burbuja"><div class="burbuja"></div><div class="burbuja"></div></div></div>
+                <div class="burbuja"></div>
+                <div class="burbuja"></div>
+            </div>
+            <div class="burbujas1">
+                <span class="burbuja1" style="left: 10%; width: 18px; height: 18px; animation-duration: 8s;"></span>
+                <span class="burbuja1" style="left: 20%; width: 6px; height: 6px; animation-duration: 12s;"></span>
+                <span class="burbuja1" style="left: 30%; width: 10px; height: 10px; animation-duration: 9s;"></span>
+                <span class="burbuja1" style="left: 40%; width: 25px; height: 25px; animation-duration: 19s;"></span>
+                <span class="burbuja1" style="left: 50%; width: 7px; height: 7px; animation-duration: 7s;"></span>
+                <span class="burbuja1" style="left: 60%; width: 9px; height: 9px; animation-duration: 15s;"></span>
+                <span class="burbuja1" style="left: 70%; width: 16px; height: 16px; animation-duration: 13s;"></span>
+                <span class="burbuja1" style="left: 80%; width: 8px; height: 8px; animation-duration: 9s;"></span>
+                <span class="burbuja1" style="left: 90%; width: 55px; height: 55px; animation-duration: 22s;"></span>
+            </div>
+                    
+        </div>
+    </section>
+        
+        
+    <script src="../JS/cv.js"></script>
 </body>
-</html>
+
+
+    
