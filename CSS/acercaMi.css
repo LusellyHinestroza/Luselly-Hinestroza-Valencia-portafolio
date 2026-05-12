@@ -1,0 +1,162 @@
+body{
+    background-color: #0B0F14;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+.mi{
+    height: 100vh;
+    display: block;
+}
+
+.mi2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #f4f7fb;
+    margin: 0px 190px 0px 190px;
+    gap: 50px;
+}
+
+.mi h1{
+    display: flex;
+    justify-content: center; /* centra vertical */
+    align-items: center;     /* centra horizontal */
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+    color: #f4f7fb;
+    font-size: 80px;
+    gap: 60px;
+}
+
+.mi h1 span{
+    color: #3efbec;
+}
+
+.mi h2{
+    font-size: 30px;
+    margin-left: 190px;
+    color: #3efbec;
+    font-size: 25px;
+}
+
+.mi2 p{
+    color: #f4f7fb;
+    font-size: 19px;
+    margin: 20px 0px 0px 0px;
+}
+.mi button{
+    color: rgb(94, 167, 231);
+    width: 255px;
+    height: 50px;
+    border-radius: 12px;
+    border: solid 1px #0B0F14;
+    margin-top: 20px;
+}
+
+.infor{
+    background-color: #3efbec;
+    width: 100%;
+    padding: 20px;
+}
+.crad{
+    display: flex;
+    gap: 10px;
+    background-color: #121A27;
+    width: 100%;
+    height: 450px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.contacto{
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #3efbec;
+    overflow: hidden;
+}
+.contacto h3{
+    font-size: 17px;
+    text-align: center;
+    padding: 3px;
+}
+
+.contacto a{
+    display: block;
+    background-color: #0B0F14;
+    margin: 4px 20px 5px 20px;
+    border-radius: 12px;
+    padding: 6px;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 17px;
+    color: #f4f7fb;
+}
+
+.card-status{
+    padding:6px;
+    border:1px solid #00ff88;
+    border-radius:12px;
+     background:rgba(24, 172, 103, 0.08);
+    margin: 4px 20px 5px 20px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 0 20px rgba(0,255,136,0.1);
+}
+
+.icon-box{
+    background:rgba(2, 40, 22, 0.744);
+    border-radius: 12px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin: 0px 8px 0px 0px;
+}
+
+.icon-box i{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    color:#00ff88;
+}
+.text{
+    display:flex;
+    flex-direction: column;
+}
+.text small{
+    color:#9aa4b2;
+    font-size:13px;
+    margin-bottom: 5px;
+}
+
+.text h2{
+    margin: 0;
+    color: #f4f7fb;
+    font-size:15px;
+    
+}
+
+.contacto img{
+    width: 33px;
+    margin: 0px 12px 0px 0px;
+}
+
+.contatos{
+    background-color: #0B0F14;
+    margin: 5px 20px 5px 20px;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.imagen{
+    width: 100%;
+    background-color: #7db10c;
+    overflow: hidden;
+}
