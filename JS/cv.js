@@ -5,7 +5,7 @@ mostrar.forEach(function(mostra){
          if (this.style.boxShadow) {
             this.style.boxShadow = "";
         } else {
-            this.style.boxShadow = "0px 0px 3px #87d0d0";
+            this.style.boxShadow = " 0 0 10px #ffffff, 0 0 25px #8814eed3";
             this.style.bordersolid = "#647a84";
 
         }
