@@ -1,0 +1,363 @@
+.cv{
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
+#starfield {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+
+
+/*cv..............................................................................................*/
+
+/*estudios*/
+
+.contenedor1{
+    display: block; 
+
+}
+
+.fondoEstudios h1{
+   
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+    font-size: 3rem;
+    font-weight:  5000;
+    color: #c9c8caef;
+    opacity: 0.7;
+    text-shadow: 0px 0px 10px #3c3b3b;
+}
+
+.generation{
+    height: 395px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;   
+    background-color: #535255ef;
+    padding: 18px 18px 18px 18px;
+    position: relative;
+    z-index: 1;
+    animation: flotar 3s ease-in-out infinite;
+}
+@keyframes flotar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px); /* sube */
+  }
+  100% {
+    transform: translateY(-1px); /* baja */
+  }
+}
+.generation1{
+    height: 395px;
+    margin-top: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;  
+    background-color: #535255ef;
+    padding: 18px 18px 18px 18px;
+    position: relative;
+    z-index: 1;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.generation2{
+    height: 395px;
+    margin-top: 150px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: block;   
+    background-color: #535255ef;
+    padding: 0px 18px 18px 18px;
+    position: relative;
+    z-index: 1;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+h1{
+    text-align: center;
+    margin: 10px;
+    margin-top: 50px;
+    padding: 8px 8px 8px 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.generation h2{
+    text-align: center;
+    color: #020106;
+    font-weight: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+.generation1 h2{
+    text-align: center;
+    color: #000000;
+    font-weight: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.generation2 h2{
+    text-align: center;
+    color: #000000;
+    font-weight: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 20px;
+}
+
+
+.generation h3{
+    font-size: 17px;
+    color: #9e9c9c;
+    text-align: center;
+}
+
+.generation1 h3{
+    font-size: 17px;
+    color: #9e9c9c;
+    text-align: center;
+}
+
+.generation2 h3{
+    font-size: 17px;
+    color: #9e9c9c;
+    text-align: center;
+}
+
+.generation p{
+    text-align: center;
+    padding: 0px;
+    font-size: 14px;
+    color: #131212;
+
+}
+
+.generation1 p{
+    text-align: center;
+    padding: 0px;
+    font-size: 16px;
+    color: #131212;
+
+}
+
+.generation2 p{
+    text-align: center;
+    padding: 0px;
+    font-size: 16px;
+    color: #131212;
+
+}
+
+
+.botoneGeratios{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botoneGeratios .generationBoton{
+    border-radius: 12px;
+    background-color: #9e9ea0f8;
+    border: solid 0.50px #ffffff;
+    box-shadow: 0px 0px 9px #0e0b0b;
+    padding: 5px;
+    width: 50%;
+    color: #0b0b0b;
+    font-size: 15px;
+
+
+}
+
+.botoneGeratios .generationBoton:hover{
+    background-color: #363638f8;
+    box-shadow: 0px 0px 5px #afaeae;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-shadow: 0px 0px 5px #5a5b5b;
+}
+/*fin de estudios*/
+
+
+
+
+
+
+/*abilidades*/
+.fondo {
+  position: relative; /* Necesario para que las burbujas queden detrás */
+  overflow: hidden; /* Las burbujas no se salen */
+
+}
+
+
+.fondoh1 h1{
+   
+    margin-top: 130px;
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+    font-size: 3rem;
+    font-weight:  5000;
+    color: #f9f9f9;
+    opacity: 0.60;
+    text-shadow: 0 0 19px #000000, 0 0 15px #000000d3;
+    position: relative;
+    z-index: 1;
+}
+
+.abilidades{
+    margin-top: 10px;
+    
+}
+
+.cardEstudios{
+    width: 250px;
+    height: 379px;
+    background-color: transparent;
+    border-radius: 12px;
+    display: block;
+    animation: flotar 4s ease-in-out infinite;
+    padding: 10px;
+    overflow: hidden;
+    z-index: 1;
+    position: relative; /* Necesario para que las burbujas queden detrás */
+
+}
+
+@keyframes flotar {
+    0%, 100%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+}
+.abilidad{
+    height: 200px;
+    width: 130px;
+    border: solid 0.1px #ffffff;
+    background: #4e4b50d3;
+    box-shadow: 0 0 1px #0a090a, 0 0 9px #9b92a2d3;
+    margin: 109px auto 0;
+    position: relative;
+    border-radius: 12px;
+    display: block;
+    padding: 5px;
+    overflow: hidden;
+    transition: transform 0.4s ease; /* más suave */
+}
+
+
+.abilidad.active {
+  transform: translateY(-67px); /* simula subir */
+  border: solid 1px #647a84;
+  background: #4e4b50d3;
+  box-shadow:0 0 5px #d5ced5, 0 0 10px #e3dfe6d3;
+}
+
+.imagenesCards{
+    width: 119px;
+    height: 110px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.imagenesCards img{
+    width: 119px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linea{
+    background-color: #080808;
+    height: 0.03px;
+    opacity: 0.4;
+}
+
+.textoCards{
+    display: block;
+}
+
+.textoCards p{
+    color: #c8c4c4f1;
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+    font-weight:  5000;
+    text-shadow: 0px 0px 2px #000000;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.textoCards button{
+   background-color: #474449;
+   box-shadow: 0px 0px 1px #ffffff;
+   border: none;
+   width: 90px;
+   height: 28px;
+   border-radius: 12px;
+   color: #dfdbdb;
+   margin-top: 5px;
+   padding: 0;
+   font-size: 14px;
+}
+
+.textoCards button:hover{
+   background-color: #333134;
+   box-shadow: 0px 0px 5px #ffffff;
+   color: #fffffff3;
+}
+
+.linea{
+    background-color: #a09da2ea;
+    height: 1px;
+}
+
+.informacioCards{
+    opacity: 1.0;
+    background: #4e4b50d3;
+    box-shadow:  0 0 5px #0a090a, 0 0 10px #9b92a2d3;
+    border: solid 0.1px #ffffff;
+    backdrop-filter: blur(5px);
+    width: 210px;
+    height: 80px;
+    position: absolute;
+    bottom:  30px;
+    margin-bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 12px;
+    padding: 5px;
+    overflow: hidden;
+  
+}
+.informacioCards:hover{
+    background-color: #918f93;
+    box-shadow: 0 0 5px #d5ced5, 0 0 10px #e3dfe6d3;
+    cursor: pointer;
+    
+}
+
+
+.informacioCards p{
+    font-size: 13px;
+    padding: 7px;
+    width: 199px;
+    margin: 0 auto;
+    color: #ffffff;
+    text-shadow: 0 0 5px #141314, 0 0 10px #494848d3;
+}
+
+
+
+

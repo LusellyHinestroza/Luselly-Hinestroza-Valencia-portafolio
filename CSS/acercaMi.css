@@ -1,27 +1,50 @@
-body{
+.acecar{
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    min-width: 100%;
+   
+    overflow-x: hidden;
+
+}
+
+#starfield {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+
+
+
+/*fin menu.................................................................*/
+.acecar{
     background-color: #0B0F14;
     margin: 0;
     min-height: 100vh;
 }
 
 
-.mi{
+.acecar .mi{
     height: 100vh;
+    margin-top: 100px;
     display: block;
 }
 
-.mi2{
+.acecar .mi2{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
     padding: 5px;
-    background-color: #f4f7fb;
+    background-color: transparent;
     margin: 0px 190px 0px 190px;
     gap: 50px;
 }
 
-.mi h1{
+.acecar .mi h1{
     display: flex;
     justify-content: center; /* centra vertical */
     align-items: center;     /* centra horizontal */
@@ -31,85 +54,123 @@ body{
     gap: 60px;
 }
 
-.mi h1 span{
-    color: #3efbec;
+.acecar .mi h1 span{
+    color: #3efbeb93;
 }
 
 .mi h2{
-    font-size: 30px;
+    font-size: 28px;
     margin-left: 190px;
-    color: #3efbec;
-    font-size: 25px;
+    color: #3efbeb93;
+    
 }
 
-.mi2 p{
-    color: #f4f7fb;
+.acecar .mi2 p{
+    color: #f4f7fb8f;
     font-size: 19px;
-    margin: 20px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
-.mi button{
-    color: rgb(94, 167, 231);
+.acecar .mi button{
+    color: #3efbeb93;
     width: 255px;
     height: 50px;
     border-radius: 12px;
-    border: solid 1px #0B0F14;
-    margin-top: 20px;
+    background-color: #121A27;
+    border:0.1px solid #5d5a5a9e;
+    margin-top: 50px;
 }
 
-.infor{
-    background-color: #3efbec;
+.acecar .infor{
+    background-color: transparent;
     width: 100%;
-    padding: 20px;
+    padding: 0px 90px 0px 0px;
+    margin-bottom: 20px;
 }
-.crad{
+
+.acecar .crad{
     display: flex;
     gap: 10px;
     background-color: #121A27;
+    border:0.1px solid #5d5a5a9e;
     width: 100%;
     height: 450px;
     padding: 20px;
     border-radius: 12px;
 }
 
-.contacto{
+.acecar .contacto{
     width: 100%;
     display: block;
     justify-content: center;
     align-items: center;
-    background-color: #3efbec;
+    background-color: transparent;
     overflow: hidden;
 }
-.contacto h3{
-    font-size: 17px;
+.acecar .contacto h3{
+    font-size: 18px;
+    color: #dee8e793;
     text-align: center;
-    padding: 3px;
+    padding: 8px;
 }
 
-.contacto a{
+.linea{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #99999978;
+    height: 0.04px;
+}
+
+.acecar .contacto a{
     display: block;
-    background-color: #0B0F14;
-    margin: 4px 20px 5px 20px;
+    border:0.1px solid #086171;
+    box-shadow:0 0 5px rgba(0, 208, 255, 0.1);
+    background-color: #2028369d;
+    margin: 8px 20px 5px 20px;
     border-radius: 12px;
-    padding: 6px;
+    padding:  6px 6px 6px 10px;
     text-decoration: none;
     overflow: hidden;
-    font-size: 17px;
+    font-size: 16px;
     color: #f4f7fb;
+    transition: all 0.3s;
 }
 
-.card-status{
+ .contacto a:hover{
+    transform: scale(1.05);
+    border: 0.1px solid #58afe9a5;
+    cursor: pointer;
+    color:  #3efbeb93;
+    box-shadow:0 0 5px rgba(127, 191, 216, 0.81);
+}
+
+.contac img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px 0px 0px;
+}
+
+
+.acecar .card-status{
     padding:6px;
-    border:1px solid #00ff88;
     border-radius:12px;
-     background:rgba(24, 172, 103, 0.08);
+    border: 0.1px solid #69eeb048;
+    background:rgba(1, 40, 22, 0.046);
     margin: 4px 20px 5px 20px;
     display:flex;
     align-items:center;
-    box-shadow:0 0 20px rgba(0,255,136,0.1);
+    box-shadow:0 0 5px rgba(0,255,136,0.1);
 }
 
-.icon-box{
-    background:rgba(2, 40, 22, 0.744);
+.acecar .card-status:hover{
+    border: 0.1px solid #00ff888a;
+    background-color: #2028369d;
+    cursor: pointer;
+    box-shadow:0 0 5px rgba(162, 236, 201, 0.81);
+}
+
+.acecar .icon-box{
+    border: 0.1px solid #00ff8848;
+    background:rgba(1, 40, 22, 0.046);
     border-radius: 12px;
     display:flex;
     justify-content:center;
@@ -117,46 +178,48 @@ body{
     margin: 0px 8px 0px 0px;
 }
 
-.icon-box i{
+
+
+.acecar .icon-box i{
     font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 50px;
     width: 50px;
-    color:#00ff88;
+    color:#00ff8848;
 }
-.text{
+.acecar .text{
     display:flex;
     flex-direction: column;
 }
-.text small{
+.acecar .text small{
     color:#9aa4b2;
     font-size:13px;
     margin-bottom: 5px;
 }
 
-.text h2{
+.acecar .text h2{
     margin: 0;
     color: #f4f7fb;
-    font-size:15px;
+    font-size:13px;
     
 }
 
-.contacto img{
-    width: 33px;
-    margin: 0px 12px 0px 0px;
-}
 
-.contatos{
-    background-color: #0B0F14;
-    margin: 5px 20px 5px 20px;
-    border-radius: 12px;
-    padding: 18px;
-}
 
-.imagen{
+.acecar .imagen{
+    margin-top: 45px;
+    margin-bottom: 8px;
     width: 100%;
-    background-color: #7db10c;
+    border-radius: 12px;
+    border: 0.3px solid #999999;
+    background-color: #2028369d;
+    box-shadow:0 0 9px rgba(166, 166, 166, 0.517);
     overflow: hidden;
+}
+
+.acecar .imagen img{
+    width: 100%;
+    height: 100%;
 }

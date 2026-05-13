@@ -1,280 +1,273 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-     <title>Portafolio luselly</title>
-    <link rel="stylesheet" href="../CSS/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <title>Portafolio luselly</title>
+        <link rel="stylesheet" href="../CSS/cv.css">
+        <link rel="stylesheet" href="../CSS/navbar.css">
     
-    
-    <!--yo cree la nav-->
-    <header>
-        <div class="areglosnav">
-            <div class="menu-resP" onclick="menuResponse()">☰</div>
-            <nav class="menu" id="menu">
-                <a href="../index.html"><img src="../imagenes/inicio.png" alt="inicio">Inicio</a>
-                <a href="./portafolio.html"><img src="../imagenes/portafolio.png" alt="portafolio">Portafolio</a>
-                <a href="./portafolio.html"><img src="../imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
-                <a href="./cv.html"><img src="../imagenes/cv.png" alt="cv">Secion de CV</a>
-            </nav>
-
-
-            <div class="cvlogo">
-                <a href="../imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv"> Descargar CV </a>
-                <p class="nombre">Luselly Hinestroza Valencia</p>
-            </div>
-            
-        </div>      
-    </header>
-    
-   
-
-    <!--Estudios Realizados-->
-   
-    
+    </head>
+    <body class="cv">
         
-    <section class="agua1">
-        <div class="fondoEstudios">
-                
-            <h1>ESTUDIOS REALIZADOS</h1> 
-            <div class="contenedor1">
-                <div class="container text-center">
-                    <div class="row align-items-start">
-                        <div class="col">
-                            <div class="generation1">
-                                <h2>Tecnico en sistemas</h2>
-                                <h3>Sena</h3>
-                                <p>
-                                    Durante mi formación en el SENA como Técnica en Sistemas, adquirí conocimientos
-                                    en mantenimiento preventivo de equipos de cómputo,  también desarrollé
-                                    habilidades en diagnóstico y solución de fallas, optimización del rendimiento de
-                                    los equipos y soporte técnico al usuario. Esta experiencia me permitió
-                                    fortalecer mi capacidad de análisis, organización y servicio, preparándome para
-                                    brindar soluciones efectivas en entornos tecnológicos.
-                                </p>
-                        
-
-                                <div class="botoneGeratios">
-                                    <button class="generationBoton" onclick="irEnlaces('https://betowa.sena.edu.co/oferta')">Más sobre Sena</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                             <div class="generation">
-                                <h2>Junior Full-Stack/Java</h2>
-                                <h3>Generation Colombia</h3>
-                                <p>
-                                    El programa de Generation Colombia me permitió fortalecer habilidades técnicas
-                                    en HTML, CSS, JavaScript, Python, Bootstrap, Java, SQL y Git/GitHub, además de
-                                    competencias blandas como comunicación, liderazgo y trabajo en equipo en
-                                    entornos ágiles. Uno de los proyectos más relevantes fue el desarrollo de un
-                                    eCommerce en equipo, donde apliqué consumo de APIs, organización de catálogos y
-                                    construcción de interfaces funcionales. Esta experiencia consolidó mi perfil
-                                    como Desarrolladora Junior Full-Stack/Java, abriéndome camino en la industria
-                                    tecnológica con confianza y compromiso.
-                                </p>
-                                
-
-                                <div class="botoneGeratios">
-                                    <button class="generationBoton">Explorar Proyectos</button>
-                                    <button class="generationBoton" onclick="irEnlaces('https://colombia.generation.org/encuentra-un-programa/')">Más sobre Generation</button>
-                                </div>
-                             </div>
-                        </div>
-                
-                        <div class="col">
-                            <div class="generation2">
-                                <h2>Auxiliar de Caja</h2>
-                                <h3>Talento Global</h3>
-                                <p>
-                                    Durante mi formación en Talento Global adquirí competencias
-                                    prácticas en el manejo de caja registradora, control de pagos
-                                    electrónicos, así como en la atención al cliente en
-                                    supermercados y comercios. Brindar un servicio amable y
-                                    eficiente. Esta experiencia me permitió desarrollar
-                                    habilidades de comunicación, organización y responsabilidad,
-                                    esenciales para desempeñarse en entornos comerciales y de
-                                    servicio al público.
-                                </p>
-                        
-
-                                <div class="botoneGeratios" onclick="irEnlaces('https://corporaciontalentoglobal.com/#donde-econtrarnos')">
-                                    <button class="generationBoton">Más sobre Talento</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> 
-            
-        </div>
-    </section>
-
-            
+        
+        <!--yo cree la nav-->
+        <div id="navbar-container"></div>
         
     
 
-    <!--esperiencias-->
+        <!--Estudios Realizados-->
     
-       
-    
-    <section class="seccion agua2">
-         <div class="fondo">
+        
             
-            <div class="fondoh1">
-                <h1>HABILIDADES</h1>
-            </div>
-            
-            <svg width="0" height="0" style="position:absolute">
-                <filter id="efecto-agua">
-                    <feTurbulence type="turbulence" baseFrequency="0.01 0.04" numOctaves="2" result="turbulencia" seed="3">
-                        <animate attributeName="baseFrequency" dur="8s" values="0.01 0.04;0.02 0.08;0.01 0.04" repeatCount="indefinite"/>
-                    </feTurbulence>
-                    <feDisplacementMap in="SourceGraphic" in2="turbulencia" scale="12" />
-                </filter>
-            </svg> 
-            
-            <div class="abilidades" style="margin-bottom: 50px;">
-             
-                <div class="container text-center">
-                    <div class="row align-items-start g-4">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                            <div class="cardEstudios">
-                                <div class="abilidad subirCard">
-                                    <div class="imagenesCards">
-                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
-                                    </div>
-                                    <div class="linea"></div>
-                                    <div class="textoCards">
-                                        <p>Explorar</p>
-                                        <button>Proyectos</button>
-                                    </div>
-                                </div>
-                                <div class="informacioCards" id="informacioCards">
-                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                            <div class="cardEstudios">
-                                <div class="abilidad subirCard">
-                                    <div class="imagenesCards">
-                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
-                                    </div>
-                                    <div class="linea"></div>
-                                    <div class="textoCards">
-                                        <p>Explorar</p>
-                                        <button>Proyectos</button>
-                                    </div>
-                                </div>
-                                <div class="informacioCards" id="informacioCards">
-                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                            <div class="cardEstudios">
-                                <div class="abilidad subirCard">
-                                    <div class="imagenesCards">
-                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
-                                    </div>
-                                    <div class="linea"></div>
-                                    <div class="textoCards">
-                                        <p>Explorar</p>
-                                        <button>Proyectos</button>
-                                    </div>
-                                </div>
-                                <div class="informacioCards" id="informacioCards">
-                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                              <div class="cardEstudios">
-                                <div class="abilidad subirCard">
-                                    <div class="imagenesCards">
-                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
-                                    </div>
-                                    <div class="linea"></div>
-                                    <div class="textoCards">
-                                        <p>Explorar</p>
-                                        <button>Proyectos</button>
-                                    </div>
-                                </div>
-                                <div class="informacioCards" id="informacioCards">
-                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                              <div class="cardEstudios">
-                                <div class="abilidad subirCard">
-                                    <div class="imagenesCards">
-                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
-                                    </div>
-                                    <div class="linea"></div>
-                                    <div class="textoCards">
-                                        <p>Explorar</p>
-                                        <button>Proyectos</button>
-                                    </div>
-                                </div>
-                                <div class="informacioCards" id="informacioCards">
-                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                              <div class="cardEstudios">
-                                <div class="abilidad subirCard">
-                                    <div class="imagenesCards">
-                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
-                                    </div>
-                                    <div class="linea"></div>
-                                    <div class="textoCards">
-                                        <p>Explorar</p>
-                                        <button>Proyectos</button>
-                                    </div>
-                                </div>
-                                <div class="informacioCards" id="informacioCards">
-                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
-                                </div>
-                            </div>
-                        </div>
-                         <div class="col-12 col-sm-12 col-md-12 col-lg-3">
-                              <div class="cardEstudios">
-                                <div class="abilidad subirCard">
-                                    <div class="imagenesCards">
-                                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
-                                    </div>
-                                    <div class="linea"></div>
-                                    <div class="textoCards">
-                                        <p>Explorar</p>
-                                        <button>Proyectos</button>
-                                    </div>
-                                </div>
-                                <div class="informacioCards" id="informacioCards">
-                                    <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <section class="agua1">
+            <div class="fondoEstudios">
                     
-        </div>
-    </section>
-        
-    <canvas id="starfield"></canvas>   
-    <script src="../JS/cv.js"></script>
-    <script src="../app.js"></script>
+                <h1>ESTUDIOS REALIZADOS</h1> 
+                <div class="contenedor1">
+                    <div class="container text-center">
+                        <div class="row align-items-start">
+                            <div class="col">
+                                <div class="generation1">
+                                    <h2>Tecnico en sistemas</h2>
+                                    <h3>Sena</h3>
+                                    <p>
+                                        Durante mi formación en el SENA como Técnica en Sistemas, adquirí conocimientos
+                                        en mantenimiento preventivo de equipos de cómputo,  también desarrollé
+                                        habilidades en diagnóstico y solución de fallas, optimización del rendimiento de
+                                        los equipos y soporte técnico al usuario. Esta experiencia me permitió
+                                        fortalecer mi capacidad de análisis, organización y servicio, preparándome para
+                                        brindar soluciones efectivas en entornos tecnológicos.
+                                    </p>
+                            
 
-</body>
+                                    <div class="botoneGeratios">
+                                        <button class="generationBoton" onclick="irEnlaces('https://betowa.sena.edu.co/oferta')">Más sobre Sena</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="generation">
+                                    <h2>Junior Full-Stack/Java</h2>
+                                    <h3>Generation Colombia</h3>
+                                    <p>
+                                        El programa de Generation Colombia me permitió fortalecer habilidades técnicas
+                                        en HTML, CSS, JavaScript, Python, Bootstrap, Java, SQL y Git/GitHub, además de
+                                        competencias blandas como comunicación, liderazgo y trabajo en equipo en
+                                        entornos ágiles. Uno de los proyectos más relevantes fue el desarrollo de un
+                                        eCommerce en equipo, donde apliqué consumo de APIs, organización de catálogos y
+                                        construcción de interfaces funcionales. Esta experiencia consolidó mi perfil
+                                        como Desarrolladora Junior Full-Stack/Java, abriéndome camino en la industria
+                                        tecnológica con confianza y compromiso.
+                                    </p>
+                                    
+
+                                    <div class="botoneGeratios">
+                                        <button class="generationBoton">Explorar Proyectos</button>
+                                        <button class="generationBoton" onclick="irEnlaces('https://colombia.generation.org/encuentra-un-programa/')">Más sobre Generation</button>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="col">
+                                <div class="generation2">
+                                    <h2>Auxiliar de Caja</h2>
+                                    <h3>Talento Global</h3>
+                                    <p>
+                                        Durante mi formación en Talento Global adquirí competencias
+                                        prácticas en el manejo de caja registradora, control de pagos
+                                        electrónicos, así como en la atención al cliente en
+                                        supermercados y comercios. Brindar un servicio amable y
+                                        eficiente. Esta experiencia me permitió desarrollar
+                                        habilidades de comunicación, organización y responsabilidad,
+                                        esenciales para desempeñarse en entornos comerciales y de
+                                        servicio al público.
+                                    </p>
+                            
+
+                                    <div class="botoneGeratios" onclick="irEnlaces('https://corporaciontalentoglobal.com/#donde-econtrarnos')">
+                                        <button class="generationBoton">Más sobre Talento</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                
+            </div>
+        </section>
+
+                
+            
+        
+
+        <!--esperiencias-->
+        
+        
+        
+        <section class="seccion agua2">
+            <div class="fondo">
+                
+                <div class="fondoh1">
+                    <h1>HABILIDADES</h1>
+                </div>
+                
+                <svg width="0" height="0" style="position:absolute">
+                    <filter id="efecto-agua">
+                        <feTurbulence type="turbulence" baseFrequency="0.01 0.04" numOctaves="2" result="turbulencia" seed="3">
+                            <animate attributeName="baseFrequency" dur="8s" values="0.01 0.04;0.02 0.08;0.01 0.04" repeatCount="indefinite"/>
+                        </feTurbulence>
+                        <feDisplacementMap in="SourceGraphic" in2="turbulencia" scale="12" />
+                    </filter>
+                </svg> 
+                
+                <div class="abilidades" style="margin-bottom: 50px;">
+                
+                    <div class="container text-center">
+                        <div class="row align-items-start g-4">
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                <div class="cardEstudios">
+                                    <div class="abilidad subirCard">
+                                        <div class="imagenesCards">
+                                            <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                        </div>
+                                        <div class="linea"></div>
+                                        <div class="textoCards">
+                                            <p>Explorar</p>
+                                            <button>Proyectos</button>
+                                        </div>
+                                    </div>
+                                    <div class="informacioCards" id="informacioCards">
+                                        <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                <div class="cardEstudios">
+                                    <div class="abilidad subirCard">
+                                        <div class="imagenesCards">
+                                            <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                        </div>
+                                        <div class="linea"></div>
+                                        <div class="textoCards">
+                                            <p>Explorar</p>
+                                            <button>Proyectos</button>
+                                        </div>
+                                    </div>
+                                    <div class="informacioCards" id="informacioCards">
+                                        <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                <div class="cardEstudios">
+                                    <div class="abilidad subirCard">
+                                        <div class="imagenesCards">
+                                            <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                        </div>
+                                        <div class="linea"></div>
+                                        <div class="textoCards">
+                                            <p>Explorar</p>
+                                            <button>Proyectos</button>
+                                        </div>
+                                    </div>
+                                    <div class="informacioCards" id="informacioCards">
+                                        <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                <div class="cardEstudios">
+                                    <div class="abilidad subirCard">
+                                        <div class="imagenesCards">
+                                            <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                        </div>
+                                        <div class="linea"></div>
+                                        <div class="textoCards">
+                                            <p>Explorar</p>
+                                            <button>Proyectos</button>
+                                        </div>
+                                    </div>
+                                    <div class="informacioCards" id="informacioCards">
+                                        <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                <div class="cardEstudios">
+                                    <div class="abilidad subirCard">
+                                        <div class="imagenesCards">
+                                            <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                        </div>
+                                        <div class="linea"></div>
+                                        <div class="textoCards">
+                                            <p>Explorar</p>
+                                            <button>Proyectos</button>
+                                        </div>
+                                    </div>
+                                    <div class="informacioCards" id="informacioCards">
+                                        <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                <div class="cardEstudios">
+                                    <div class="abilidad subirCard">
+                                        <div class="imagenesCards">
+                                            <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                        </div>
+                                        <div class="linea"></div>
+                                        <div class="textoCards">
+                                            <p>Explorar</p>
+                                            <button>Proyectos</button>
+                                        </div>
+                                    </div>
+                                    <div class="informacioCards" id="informacioCards">
+                                        <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+                                <div class="cardEstudios">
+                                    <div class="abilidad subirCard">
+                                        <div class="imagenesCards">
+                                            <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                                        </div>
+                                        <div class="linea"></div>
+                                        <div class="textoCards">
+                                            <p>Explorar</p>
+                                            <button>Proyectos</button>
+                                        </div>
+                                    </div>
+                                    <div class="informacioCards" id="informacioCards">
+                                        <p>hkhvkjhjhjdc kvdfhygiufrduighi odospghhdgñsgghgshdhgs hguhkjhdjgbkj dvfvbdfjgh.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                        
+            </div>
+        </section>
+            
+        <canvas id="starfield"></canvas> 
+        <script>
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                });
+        </script> 
+        <script src="../JS/navbar.js"></script> 
+        <script src="../JS/cv.js"></script>
+        
+        
+    </body>
+</html>
 
 
     

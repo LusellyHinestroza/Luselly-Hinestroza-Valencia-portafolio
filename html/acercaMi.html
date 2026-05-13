@@ -1,80 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <title>Portafolio luselly</title>
-    <link rel="stylesheet" href="../CSS/acercaMi.css">
-    <link rel="stylesheet" href="../CSS/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <title>Portafolio luselly</title>
+        <link rel="stylesheet" href="../CSS/acercaMi.css">
+        <link rel="stylesheet" href="../CSS/navbar.css">
+    </head>
+    <body class="acecar">
+        <div id="navbar-container"></div>
+        
+        <div class="mi">
+            <h1>Hola, soy<span>Luselly Hinestroza Valencia</span></h1>
+            <h2> Junior Full-Stack/Java Developer</h2>
+            <div class="mi2">
+                <div class="infor">
+                    <p>Construyo aplicaciones funcionales y escalables, solucionando problemas de manera eficiente y manteniendo al cliente satisfecho en cada etapa del desarrollo. Como Junior Full-Stack / Java Developer, mi prioridad es crear soluciones modernas, intuitivas y de calidad, aportando compromiso, aprendizaje continuo y trabajo en equipo para brindar la mejor experiencia posible a los usuarios y clientes.</p>
+                    <button> En busca de una oportunidad</button>
+                </div>
 
-    
-    <header>
-        <div class="areglosnav">
-            <div class="menu-resP" onclick="menuResponse()">☰</div>
-            <nav class="menu" id="menu">
-                <a href="../index.html"><img src="../imagenes/inicio.png" alt="inicio">Inicio</a>
-                <a href="./portafolio.html"><img src="../imagenes/portafolio.png" alt="portafolio">Portafolio</a>
-                <a href="./acercaMi.html"><img src="../imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
-                <a href="./cv.html"><img src="../imagenes/cv.png" alt="cv">Secion de CV</a>
-            </nav>
-
-
-            <div class="cvlogo">
-                <p class="nombre">Luselly Hinestroza Valencia</p>
-            </div>
-            
-        </div>      
-    </header>
-     
-    <div class="mi">
-        <h1>Hola, soy<span>Luselly Hinestroza Valencia</span></h1>
-        <h2> Junior Full-Stack/Java Developer</h2>
-        <div class="mi2">
-            <div class="infor">
-                <p>Construyo aplicaciones funcionales y escalables, solucionando problemas de manera eficiente y manteniendo al cliente satisfecho en cada etapa del desarrollo. Como Junior Full-Stack / Java Developer, mi prioridad es crear soluciones modernas, intuitivas y de calidad, aportando compromiso, aprendizaje continuo y trabajo en equipo para brindar la mejor experiencia posible a los usuarios y clientes.</p>
-                <button> En busca de una oportunidad</button>
-            </div>
-
-            <div class="crad">
-                <div class="contacto">
-                   <h3>Informacion de Contacto</h3>
-                   <a href="../index.html"><img src="https://i.postimg.cc/BvkTY4Ln/Copilot-20260512-020546.png" alt="Correo">Correo</a>
-                   <a href="../index.html"><img src="https://i.postimg.cc/L8mNL9fC/Copilot-20260512-015014.png" alt="Github">Github</a>
-                   <a href="../index.html"><img src="https://i.postimg.cc/TwQD8xhR/Copilot-20260512-022110.png" alt="Linkedin">Linkedin</a>
-                   <h3>Busco</h3>
-                   <div class="card-status">
-                        <div class="icon-box">
-                            <i class="bi bi-lightning-charge-fill"></i>
+                <div class="crad">
+                    <div class="contacto">
+                       
+                        <h3>Busco</h3>
+                        <div class="card-status">
+                                <div class="icon-box">
+                                    <i class="bi bi-lightning-charge-fill"></i>
+                                </div>
+                                <div class="text">
+                                    <small>ESTADO</small>
+                                    <h2>Disponibilidad inmediata</h2>
+                                </div>
                         </div>
+                        <div class="card-status">
+                                <div class="icon-box">
+                                   <i class="bi bi-briefcase"></i>                                
+                                </div>
+                                <div class="text">
+                                    <small>TRABAJO</small>
+                                    <h2>Remoto / Hibrido / Presencial</h2>
+                                </div>
+                        </div>
+                        <div class="linea"></div>
 
-                        <div class="text">
-                            <small>ESTADO</small>
-                            <h2>Disponibilidad inmediata</h2>
+                        <h3>Informacion de Contacto</h3>
+                        <div class="contac">
+                            <a href="https://mail.google.com/mail/?view=cm&to=valencialucelly48@gmail.com" target="_blank"><img src="https://i.postimg.cc/BvkTY4Ln/Copilot-20260512-020546.png" alt="Correo">Correo</a>
+                            <a href="#" onclick="irEnlaces('https://github.com/LusellyHinestroza')"><img src="https://i.postimg.cc/L8mNL9fC/Copilot-20260512-015014.png" alt="Github">Github</a>  
+                            <a href="#" onclick="irEnlaces('https://www.linkedin.com/in/luselly-hinestroza-valencia-desarrollo-de-software/')"><img src="https://i.postimg.cc/TwQD8xhR/Copilot-20260512-022110.png" alt="Linkedin">Linkedin</a>
                         </div>
                     </div>
-                   <div class="contatos">Remoto / Hibrido / Presencial</div>
-                   <div class="contatos">Disponibilidad inmediata</div>
-                </div>
 
-                 <div class="imagen">
-                    <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
-                </div>
-            </div>
-
-               
-
+                    <div class="imagen">
+                        <img src="https://i.postimg.cc/QMTddjSh/javascript-logo-javascript-icon-transparent-free-png-removebg-preview.png" alt="imagen">
+                    </div>
+                </div>  
                 
+            </div>
             
         </div>
-        
-    </div>
-   
-    <script src="../app.js"></script>
-    <script src="../JS/acercaMi.js"></script>
-</body>
+
+        <script>
+            fetch("navbar.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("navbar-container").innerHTML = data;
+                });
+        </script>
+        <script src="../JS/navbar.js"></script>
+        <script src="../JS/acercaMi.js"></script>
+    </body>
 </html>
