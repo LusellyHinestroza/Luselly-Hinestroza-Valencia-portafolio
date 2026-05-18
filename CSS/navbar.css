@@ -260,7 +260,8 @@
     align-items: center; 
     gap: 6px;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: #785884;
+    text-shadow: 0px 0px 5px #000000;
     font-size: 19px;
     font-family: "Antic Slab", serif; 
     position: relative;
@@ -271,12 +272,12 @@
 
 
 .menu a:hover{
-    color: #000000;
-    background-color: #87878ac4;
+    border: solid 0.1px #903dcf;
+    background-color: #240f36;
+    box-shadow: 0px 0px 5px #8d3dcf;
+    color: #bd8de4;
     padding: 5px 12px 5px 12px;
     border-radius: 12px;
-    box-shadow: 0px 0px 9px #ffffff;
-    border: solid 0.5px #000000;
 }
 
 .menu-resP{
@@ -289,7 +290,8 @@
     width: 1.5rem;  
 }
 .nombre{
-    color: rgb(188, 186, 186);
+    color: #8640bf;
+    text-shadow: 0px 0px 5px #000000;
     font-size: 19px;
     font-weight: bold;
     text-align: center;
@@ -313,17 +315,18 @@
 }
 
 .btn-cv{
-    background-color: #87878ac4; 
+    background-color: #544065; 
     opacity: 0.70;
     padding: 5px 12px 5px 12px;
     border-radius: 12px;
-    color: #ffffff;
+    color: rgb(26, 4, 43);
     font-family: "Antic Slab", serif; 
 }
 
 .btn-cv:hover{
-    background-color: #cbcbcef9;
-    box-shadow: 0px 0px 9px #ffffff;
-    border: solid 0.5px #000000;
-    color: #000000;
+    border: solid 0.1px #903dcf;
+    background-color: #240f36;
+    box-shadow: 0px 0px 5px #8d3dcf;
+    color: #bd8de4;
 }
+

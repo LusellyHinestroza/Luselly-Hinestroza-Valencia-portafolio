@@ -5,18 +5,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
         <title>Portafolio luselly</title>
         <link rel="stylesheet" href="../CSS/cv.css">
         <link rel="stylesheet" href="../CSS/navbar.css">
     
     </head>
     <body class="cv">
-        
-        
+
         <!--yo cree la nav-->
         <div id="navbar-container"></div>
-        
-    
+
+             <!-- PLEXUS IZQUIERDO -->
+        <div class="plexus-side left">
+            <canvas id="canvasLeft"></canvas>
+        </div>
+
+        <!-- PLEXUS DERECHO -->
+        <div class="plexus-side right">
+            <canvas id="canvasRight"></canvas>
+        </div>
+
+
+       
 
         <!--Estudios Realizados-->
     
@@ -31,8 +42,8 @@
                         <div class="row align-items-start">
                             <div class="col">
                                 <div class="generation1">
+                                    <h3>SENA</h3>
                                     <h2>Tecnico en sistemas</h2>
-                                    <h3>Sena</h3>
                                     <p>
                                         Durante mi formación en el SENA como Técnica en Sistemas, adquirí conocimientos
                                         en mantenimiento preventivo de equipos de cómputo,  también desarrollé
@@ -50,8 +61,8 @@
                             </div>
                             <div class="col">
                                 <div class="generation">
-                                    <h2>Junior Full-Stack/Java</h2>
                                     <h3>Generation Colombia</h3>
+                                    <h2>Junior Full-Stack/Java</h2>
                                     <p>
                                         El programa de Generation Colombia me permitió fortalecer habilidades técnicas
                                         en HTML, CSS, JavaScript, Python, Bootstrap, Java, SQL y Git/GitHub, además de
@@ -73,8 +84,8 @@
                     
                             <div class="col">
                                 <div class="generation2">
-                                    <h2>Auxiliar de Caja</h2>
                                     <h3>Talento Global</h3>
+                                    <h2>Auxiliar de Caja</h2>
                                     <p>
                                         Durante mi formación en Talento Global adquirí competencias
                                         prácticas en el manejo de caja registradora, control de pagos
@@ -102,7 +113,7 @@
                 
             
         
-
+      
         <!--esperiencias-->
         
         
@@ -253,8 +264,8 @@
                         
             </div>
         </section>
-            
-        <canvas id="starfield"></canvas> 
+       
+      
         <script>
             fetch("navbar.html")
                 .then(response => response.text())

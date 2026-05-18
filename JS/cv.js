@@ -4,9 +4,12 @@ mostrar.forEach(function(mostra){
     mostra.addEventListener("click", function(){
          if (this.style.boxShadow) {
             this.style.boxShadow = "";
+            this.style.border = "";
+            this.style.backgroundColor = "";
         } else {
-            this.style.boxShadow = " 0 0 5px #d5ced5, 0 0 10px #e3dfe6d3";
-            this.style.bordersolid = "#647a84";
+            this.style.boxShadow = "0px 0px 5px #8d3dcf";
+            this.style.border = "0.1px solid #7942b0d7;";
+            this.style.backgroundColor = "#230d3ad7";
 
         }
 
@@ -29,391 +32,167 @@ function irEnlaces(url){
 }
 
 
+/*FONDO.................................................................................. */
 
+        function createPlexus(canvas, options = {}) {
+            const ctx = canvas.getContext('2d');
+            const cfg = {
+                nodeCount:    options.nodeCount    ?? 55,
+                maxDist:      options.maxDist      ?? 160,
+                triDist:      options.triDist      ?? 110,
+                nodeRadius:   options.nodeRadius   ?? 2.2,
+                speed:        options.speed        ?? 0.35,
+                lineAlpha:    options.lineAlpha    ?? 0.35,
+                triAlpha:     options.triAlpha     ?? 0.10,
+                nodeAlpha:    options.nodeAlpha    ?? 0.90,
+                primaryColor: options.primaryColor ?? [230, 0, 130],
+                accentColor:  options.accentColor  ?? [180, 0, 200],
+            };
 
+            let W, H, nodes;
 
+            function resize() {
+                const dpr = window.devicePixelRatio || 1;
+                W = canvas.offsetWidth;
+                H = canvas.offsetHeight;
+                canvas.width  = W * dpr;
+                canvas.height = H * dpr;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            }
 
-/*fodo..................................................................................*/
+            function rand(a, b) { return a + Math.random() * (b - a); }
 
+            function initNodes() {
+                nodes = [];
+                const clusters = [
+                    { cx: W * 0.5, cy: H * 0.20, r: H * 0.20, n: Math.round(cfg.nodeCount * 0.35) },
+                    { cx: W * 0.5, cy: H * 0.60, r: H * 0.24, n: Math.round(cfg.nodeCount * 0.40) },
+                    { cx: W * 0.5, cy: H * 0.85, r: H * 0.14, n: Math.round(cfg.nodeCount * 0.25) },
+                ];
+                clusters.forEach(cl => {
+                    for (let i = 0; i < cl.n; i++) {
+                        const a = Math.random() * Math.PI * 2;
+                        const d = Math.random() * cl.r;
+                        nodes.push({
+                            x:  cl.cx + Math.cos(a) * d,
+                            y:  cl.cy + Math.sin(a) * d,
+                            vx: rand(-cfg.speed, cfg.speed),
+                            vy: rand(-cfg.speed, cfg.speed),
+                            r:  rand(cfg.nodeRadius * 0.5, cfg.nodeRadius * 1.6),
+                        });
+                    }
+                });
+            }
 
-const canvas = document.getElementById('starfield');
-const ctx = canvas.getContext('2d');
+            function lerp(c1, c2, t) {
+                return [
+                    Math.round(c1[0] + (c2[0] - c1[0]) * t),
+                    Math.round(c1[1] + (c2[1] - c1[1]) * t),
+                    Math.round(c1[2] + (c2[2] - c1[2]) * t),
+                ];
+            }
 
-/* resize */
+            function rgba(c, a) { return `rgba(${c[0]},${c[1]},${c[2]},${a})`; }
 
-function resize(){
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+                const n = nodes;
 
-resize();
+                /* Triángulos */
+                for (let i = 0; i < n.length - 2; i++) {
+                    for (let j = i + 1; j < n.length - 1; j++) {
+                        const dij = Math.hypot(n[i].x - n[j].x, n[i].y - n[j].y);
+                        if (dij > cfg.triDist) continue;
+                        for (let k = j + 1; k < n.length; k++) {
+                            const dik = Math.hypot(n[i].x - n[k].x, n[i].y - n[k].y);
+                            const djk = Math.hypot(n[j].x - n[k].x, n[j].y - n[k].y);
+                            if (dik > cfg.triDist || djk > cfg.triDist) continue;
+                            const strength = 1 - (dij + dik + djk) / (cfg.triDist * 3);
+                            const t   = (n[i].x + n[j].x + n[k].x) / 3 / W;
+                            const col = lerp(cfg.primaryColor, cfg.accentColor, t);
+                            ctx.beginPath();
+                            ctx.moveTo(n[i].x, n[i].y);
+                            ctx.lineTo(n[j].x, n[j].y);
+                            ctx.lineTo(n[k].x, n[k].y);
+                            ctx.closePath();
+                            ctx.fillStyle = rgba(col, cfg.triAlpha * strength * 1.8);
+                            ctx.fill();
+                        }
+                    }
+                }
 
-window.addEventListener('resize', () => {
-  resize();
-  initStars();
+                /* Líneas */
+                for (let i = 0; i < n.length - 1; i++) {
+                    for (let j = i + 1; j < n.length; j++) {
+                        const d = Math.hypot(n[i].x - n[j].x, n[i].y - n[j].y);
+                        if (d > cfg.maxDist) continue;
+                        const alpha = cfg.lineAlpha * (1 - d / cfg.maxDist);
+                        const t   = (n[i].x + n[j].x) / 2 / W;
+                        const col = lerp(cfg.primaryColor, cfg.accentColor, t);
+                        ctx.beginPath();
+                        ctx.moveTo(n[i].x, n[i].y);
+                        ctx.lineTo(n[j].x, n[j].y);
+                        ctx.strokeStyle = rgba(col, alpha);
+                        ctx.lineWidth   = 0.7;
+                        ctx.stroke();
+                    }
+                }
+
+                /* Nodos */
+                n.forEach(node => {
+                    const t   = node.x / W;
+                    const col = lerp(cfg.primaryColor, cfg.accentColor, t);
+                    const grd = ctx.createRadialGradient(node.x, node.y, 0, node.x, node.y, node.r * 4);
+                    grd.addColorStop(0, rgba(col, 0.25));
+                    grd.addColorStop(1, rgba(col, 0));
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.r * 4, 0, Math.PI * 2);
+                    ctx.fillStyle = grd;
+                    ctx.fill();
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, node.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(255,255,255,${cfg.nodeAlpha})`;
+                    ctx.fill();
+                });
+            }
+
+            function update() {
+                nodes.forEach(node => {
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    if (node.x < 0 || node.x > W) node.vx *= -1;
+                    if (node.y < 0 || node.y > H) node.vy *= -1;
+                });
+            }
+
+            let raf;
+            function loop() { update(); draw(); raf = requestAnimationFrame(loop); }
+
+            function init() {
+                resize();
+                initNodes();
+                if (raf) cancelAnimationFrame(raf);
+                loop();
+            }
+
+            new ResizeObserver(() => init()).observe(canvas.parentElement);
+            init();
+        }
+
+   createPlexus(document.getElementById('canvasLeft'), {
+    nodeCount:    60,
+    maxDist:      165,
+    triDist:      115,
+    primaryColor: [141, 61, 207],   // #8d3dcf
+    accentColor:  [36, 15, 54],     // #240f36
+    nodeAlpha:    0.90,
 });
 
-/* capas */
-
-const LAYERS = [
-
-  {
-    count:320,
-    speedMul:0.015,
-    minR:0.3,
-    maxR:1.0,
-    twinkleSpeed:0.008,
-    alpha:0.55
-  },
-
-  {
-    count:180,
-    speedMul:0.030,
-    minR:0.5,
-    maxR:1.3,
-    twinkleSpeed:0.012,
-    alpha:0.75
-  },
-
-  {
-    count:70,
-    speedMul:0.055,
-    minR:1.0,
-    maxR:2.2,
-    twinkleSpeed:0.018,
-    alpha:1
-  }
-
-];
-
-let stars = [];
-
-/* random */
-
-function rand(min,max){
-  return min + Math.random() * (max - min);
-}
-
-/* crear estrella */
-
-function makeStar(layer){
-
-  return {
-
-    ox:rand(0, canvas.width),
-    oy:rand(0, canvas.height),
-
-    r:rand(layer.minR, layer.maxR),
-
-    ampX:rand(8,28) * layer.speedMul * 18,
-    ampY:rand(8,28) * layer.speedMul * 18,
-
-    freqX:rand(0.00012,0.00030),
-    freqY:rand(0.00009,0.00025),
-
-    phaseX:rand(0, Math.PI * 2),
-    phaseY:rand(0, Math.PI * 2),
-
-    twinklePhase:rand(0, Math.PI * 2),
-    twinkleSpeed:layer.twinkleSpeed * rand(0.6,1.4),
-
-    baseAlpha:layer.alpha,
-
-    layer,
-
-    hue:
-      Math.random() < 0.15
-      ? (Math.random() < 0.5 ? 210 : 40)
-      : 0,
-
-    sat:
-      Math.random() < 0.15
-      ? rand(20,50)
-      : 0
-
-  };
-
-}
-
-/* iniciar estrellas */
-
-function initStars(){
-
-  stars = [];
-
-  LAYERS.forEach(layer => {
-
-    for(let i = 0; i < layer.count; i++){
-
-      stars.push(makeStar(layer));
-
-    }
-
-  });
-
-}
-
-initStars();
-
-/* estrellas fugaces */
-
-let shooters = [];
-
-function spawnShooter(){
-
-  const angle = rand(Math.PI * 10.1, Math.PI * 10.45);
-
-  const speed = rand(7,12);
-
-  shooters.push({
-
-    x:rand(0, canvas.width * 0.8),
-    y:rand(0, canvas.height * 0.4),
-
-    vx:Math.cos(angle) * speed,
-    vy:Math.sin(angle) * speed,
-
-    len:rand(80,180),
-
-    alpha:1,
-
-    fade:rand(0.012,0.022)
-
-  });
-
-}
-
-function scheduleShooter(){
-
-  spawnShooter();
-
-  setTimeout(
-    scheduleShooter,
-    rand(3000,7000)
-  );
-
-}
-
-setTimeout(
-  scheduleShooter,
-  rand(1500,3000)
-);
-
-/* animación */
-
-function draw(){
-
-  /* fondo */
-
-  const bg = ctx.createRadialGradient(
-
-    canvas.width * 0.5,
-    canvas.height * 0.25,
-    0,
-
-    canvas.width * 0.5,
-    canvas.height * 0.25,
-    canvas.width * 0.8
-
-  );
-
-  bg.addColorStop(0,'#0B0F14');
-  
-
-  ctx.fillStyle = bg;
-
-  ctx.fillRect(
-    0,
-    0,
-    canvas.width,
-    canvas.height
-  );
-
-  const now = performance.now();
-
-  /* scroll */
-
-  const scrollY = window.scrollY;
-
-  /* estrellas */
-
-  stars.forEach(s => {
-
-    const depth = 2 + s.layer.speedMul * 20;
-
-    const x =
-
-      s.ox +
-
-      Math.sin(
-        now * s.freqX + s.phaseX
-      ) * s.ampX;
-
-    const y =
-
-      (
-        s.oy +
-
-        Math.sin(
-          now * s.freqY + s.phaseY
-        ) * s.ampY +
-
-        scrollY * depth
-
-      ) % (canvas.height + 100);
-
-    /* brillo */
-
-    s.twinklePhase += s.twinkleSpeed;
-
-    const twinkle =
-
-      0.85 +
-
-      0.65 *
-
-      Math.sin(s.twinklePhase);
-
-    const alpha =
-
-      s.baseAlpha * twinkle;
-
-    ctx.save();
-
-    /* glow */
-
-    if(s.r > 1){
-
-      const glow = ctx.createRadialGradient(
-
-        x,
-        y,
-        0,
-
-        x,
-        y,
-        s.r * 5
-
-      );
-
-      glow.addColorStop(
-        0,
-        `rgba(255,255,255,${alpha * 0.35})`
-      );
-
-      glow.addColorStop(
-        1,
-        'rgba(154, 155, 162, 0)'
-      );
-
-      ctx.fillStyle = glow;
-
-      ctx.beginPath();
-
-      ctx.arc(
-        x,
-        y,
-        s.r * 5,
-        0,
-        Math.PI * 2
-      );
-
-      ctx.fill();
-
-    }
-
-    /* estrella */
-
-    ctx.fillStyle =
-
-      s.hue !== 0
-
-      ? `hsla(${s.hue}, ${s.sat}%, 85%, ${alpha})`
-
-      : `rgba(255,255,255,${alpha})`;
-
-    ctx.beginPath();
-
-    ctx.arc(
-
-      x,
-      y,
-
-      s.r * (0.10 + depth * 0.7),
-
-      0,
-      Math.PI * 2
-
-    );
-
-    ctx.fill();
-
-    ctx.restore();
-
-  });
-
-  /* fugaces */
-
-  shooters = shooters.filter(
-    sh => sh.alpha > 0
-  );
-
-  shooters.forEach(sh => {
-
-    ctx.save();
-
-    const grad = ctx.createLinearGradient(
-
-      sh.x - sh.vx * (sh.len / 10),
-      sh.y - sh.vy * (sh.len / 10),
-
-      sh.x,
-      sh.y
-
-    );
-
-    grad.addColorStop(
-      0,
-      'rgba(246, 239, 239, 0)'
-    );
-
-    grad.addColorStop(
-      1,
-      `rgba(255,255,255,${sh.alpha})`
-    );
-
-    ctx.strokeStyle = grad;
-
-    ctx.lineWidth = 1.4;
-
-    ctx.beginPath();
-
-    ctx.moveTo(
-
-      sh.x - sh.vx * (sh.len / 10),
-      sh.y - sh.vy * (sh.len / 10)
-
-    );
-
-    ctx.lineTo(
-      sh.x,
-      sh.y
-    );
-
-    ctx.stroke();
-
-    ctx.restore();
-
-    sh.x += sh.vx;
-    sh.y += sh.vy;
-
-    sh.alpha -= sh.fade;
-
-  });
-
-  requestAnimationFrame(draw);
-
-}
-
-draw();
-
+createPlexus(document.getElementById('canvasRight'), {
+    nodeCount:    60,
+    maxDist:      165,
+    triDist:      115,
+    primaryColor: [189, 141, 228],  // #bd8de4
+    accentColor:  [141, 61, 207],   // #8d3dcf
+    nodeAlpha:    0.90,
+});
