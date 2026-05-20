@@ -5,15 +5,14 @@
 
 /*fin menu.................................................................*/
 .acecar{
-     background-color: black;
+    background-color: black;
     margin: 0;
-    min-height: 100vh;
 }
 
 
-.acecar .mi{
-    height: 100vh;
-    margin-top: 100px;
+ .mi{
+    margin-top: 46px;
+    margin-bottom: 46px;
     display: block;
 }
 
@@ -21,10 +20,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 50px;
     padding: 5px;
     background-color: transparent;
-    margin: 0px 190px 0px 190px;
+    margin: 120px 190px 0px 190px;
     gap: 50px;
 }
 
@@ -34,7 +33,7 @@
     align-items: center;     /* centra horizontal */
     font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
     color: #f4f7fb8d;
-    font-size: 80px;
+    font-size: 70px;
     gap: 60px;
 }
 
@@ -43,21 +42,20 @@
 }
 
 .mi h2{
-    font-size: 28px;
-  
+    font-size: 32px;
     color: #4e285d;
-    
 }
 
 .acecar .mi2 p{
     color: #f4f7fb8f;
-    font-size: 19px;
+    font-size: 20px;
     margin: 0px 0px 0px 0px;
 }
 .acecar .mi button{
     color: #bd8de4;
-    width: 255px;
-    height: 50px;
+    font-size: 20px;
+    width: 395px;
+    padding: 14px;
     border-radius: 12px;
     border: solid 0.1px #34183f;
     background-color: #190a297a;
@@ -94,7 +92,7 @@
     font-size: 18px;
     color: #c49de4c5 ;
     text-align: center;
-    padding: 8px;
+    padding: 10px 8px 8px 8px;
 }
 
 .linea{
@@ -179,7 +177,7 @@
 
 .acecar .text h2{
     margin: 0;
-    color: #bd8de4 ;
+    color: #bd8de4;
     font-size:13px;
     
 }
@@ -207,4 +205,401 @@
     height: 0.1px;
     background-color: #7a638a;
     margin-bottom: 30px;
+}
+
+.inspiracion{
+    width: 100%;
+    margin-top: 130px;
+    margin-bottom: 110px;
+    background-color: transparent;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+.parrafo{
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    width: 90%;
+    background-color: #d4c7e287;
+    border: solid 0.1px #fdfdfd;
+    border-radius: 12px;
+    color: #1e0834ac;
+}
+
+
+.videos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 50px;
+    width: 92%;
+    padding: 20px 20px 20px 20px;
+    overflow-x: hidden;
+}
+
+.cliente, .htm{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 400px;
+
+    padding: 20px;
+
+    border: solid 0.1px #34183f;
+    background-color: #190a297a;
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+
+.plexus-side{
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cliente video,
+.htm video{
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+.plexus-side.left  { left: 0; }
+.plexus-side.right { right: 0; }
+
+.plexus-side canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/*OBJETIVOS..............................................*/
+
+
+.objetivos{
+    width:95%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: solid 0.1px #34183f;
+    background-color: #0000001a;
+    box-shadow: 0px 0px 15px #1b0135;
+    overflow:hidden;
+    margin-top: 95px;
+    margin-bottom: 95px;
+    gap: 30px;
+    padding: 20px 80px 20px 20px;
+}
+
+
+
+/* BOLA */
+
+/* CONTENEDOR */
+
+.contenedor{
+    position:relative;
+    display: block;
+    justify-content: center;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.objetivo{
+    display: flex;
+    justify-content: center; /* centra vertical */
+    align-items: center;     /* centra horizontal */
+    font-family: 'Fredoka', 'Arial Rounded MT Bold', sans-serif;
+    color: #f4f7fb8d;
+    font-size: 50px;
+    gap: 60px;
+    padding: 0px 20px 40px 20px;
+}
+
+.objetivo span{
+    color: #34183f;
+}
+
+
+.objParrafo p{
+    font-size: 18px;
+    color: #ffffff69;
+}
+/* BOLA */
+
+.bola{
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    overflow:hidden;
+    position:relative;
+    margin: 0px 40px 0px 20px;
+
+    border:1px solid #c6a5e8d5;
+
+    box-shadow:
+    0px 0px 30px #3e215dd5,
+    inset 0px 0px 25px #3e215dd5;
+
+    animation:flotar 5s ease-in-out infinite;
+}
+
+/* AGUA */
+
+.agua{
+    position:absolute;
+
+    width:720px;
+    height:720px;
+
+    left:-160px;
+    top:190px;
+
+    background:linear-gradient(
+    #190a297a,
+    #3e215dd5,
+    #6e5a84c3
+    );
+
+    border-radius:
+    45% 55% 80% 30% /
+    40% 40% 60% 60%;
+
+    animation:
+    girar 7s linear infinite,
+    mover 4s ease-in-out infinite alternate,
+    deformar 6s ease-in-out infinite;
+}
+
+/* BRILLO */
+
+.bola::before{
+    content:"";
+    position:absolute;
+
+    width: 10px;
+    height:90px;
+
+    background:#c8c0d0d5;
+
+    border-radius:50%;
+
+    top: 108px;
+    left: 90px;
+
+    filter:blur(10px);
+
+    z-index:10;
+}
+
+/* GOTAS */
+
+.gota{
+    position:absolute;
+    background:#6c2bc2;
+    border-radius:50%;
+
+    box-shadow:0px 0px 10px #ffffff;
+}
+
+/* GOTA 1 */
+
+.gota1{
+    width:20px;
+    height:20px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    animation:salir1 3s ease-in-out infinite;
+}
+
+/* GOTA 2 */
+
+.gota2{
+    width:20px;
+    height:20px;
+
+    right:80px;
+    bottom:70px;
+
+    animation:salir2 4s ease-in-out infinite;
+}
+
+/* GOTA 3 */
+
+.gota3{
+    width:15px;
+    height:15px;
+
+    left:220px;
+    bottom:40px;
+
+    animation:salir3 2.5s ease-in-out infinite;
+}
+
+/* GOTA 4 */
+
+.gota4{
+    width:20px;
+    height:20px;
+
+    right:180px;
+    bottom:50px;
+
+    animation:salir4 3.5s ease-in-out infinite;
+}
+
+/* ROTAR AGUA */
+
+@keyframes girar{
+    0%{
+        transform:rotate(0deg);
+    }
+
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+/* SUBIR Y BAJAR */
+
+@keyframes mover{
+    0%{
+        top:100px;
+    }
+
+    100%{
+        top:200px;
+    }
+}
+
+/* CURVAS */
+
+@keyframes deformar{
+
+    0%{
+        border-radius:
+        45% 55% 70% 30% /
+        40% 40% 60% 60%;
+    }
+
+    25%{
+        border-radius:
+        60% 40% 35% 65% /
+        55% 30% 70% 45%;
+    }
+
+    50%{
+        border-radius:
+        35% 65% 55% 45% /
+        60% 50% 40% 50%;
+    }
+
+    75%{
+        border-radius:
+        55% 45% 70% 30% /
+        35% 65% 45% 55%;
+    }
+
+    100%{
+        border-radius:
+        45% 55% 70% 30% /
+        40% 40% 60% 60%;
+    }
+}
+
+/* FLOTAR BOLA */
+
+@keyframes flotar{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ANIMACION GOTAS */
+
+@keyframes salir1{
+
+    0%{
+        transform:translateY(0px) scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-180px) translateX(-30px) scale(0);
+        opacity:0;
+    }
+}
+
+@keyframes salir2{
+
+    0%{
+        transform:translateY(0px) scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-210px) translateX(40px) scale(0);
+        opacity:0;
+    }
+}
+
+@keyframes salir3{
+
+    0%{
+        transform:translateY(0px) scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-160px) translateX(-20px) scale(0);
+        opacity:0;
+    }
+}
+
+@keyframes salir4{
+
+    0%{
+        transform:translateY(0px) scale(1);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-190px) translateX(20px) scale(0);
+        opacity:0;
+    }
 }
