@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="../CSS/navbar.css">
@@ -12,6 +13,126 @@
     </head>
     <body>
         <div id="navbar-container"></div>
+            
+        <section class="publicaciones">
+            <div class="mensajeBienvenida">
+
+                <h2>Bienvenido a mis publicaciones</h2>
+
+                <p>
+                    Aquí comparto proyectos, ideas y experiencias relacionadas con el
+                    desarrollo web y la tecnología. Tu opinión es muy importante,
+                    así que puedes dejar comentarios, sugerencias o compartir lo que piensas
+                    sobre cada publicación.
+                </p>
+
+            </div>
+                <div class="publicacion">
+                    <!-- ENCABEZADO -->
+                    <div class="encabezado">
+
+                        <div class="perfil">
+                            <img src="../imagenes/portafolio.png" alt="perfil">
+
+                            <div class="datos">
+                                <h3>Proyecto Portfolio</h3>
+                                <span>Desarrollo Web • Hace 2 horas</span>
+                            </div>
+                        </div>
+
+                    
+
+                    </div>
+
+                    <!-- INFORMACION -->
+                    <div class="informacion" >
+
+                        <h1>Portafolio Moderno</h1>
+
+                        <p>
+                            Proyecto desarrollado con HTML, CSS y JavaScript moderno.
+                            Diseño responsive, animaciones suaves y una interfaz inspirada
+                            en plataformas tecnológicas actuales.
+                        </p>
+
+                    </div>
+
+                    <!-- IMAGEN OPCIONAL -->
+                    <div class="imagenPublicacion" style="display: none;">
+
+                        <!-- SI QUIERES MOSTRAR IMAGEN -->
+                        <img src="https://i.postimg.cc/CLSnHtKG/Captura-de-pantalla-2026-05-25-132458.png" alt="proyecto">
+
+                        <!-- SI NO QUIERES MOSTRARLA SOLO COMENTA EL IMG -->
+                        <!-- <img src="../imagenes/portafolio.png" alt="proyecto"> -->
+
+                    </div>
+
+                    <div class="videoPublicacion" >
+                        <video autoplay loop muted playsinline>
+                            <source src="../imagenes/cliente.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+
+                    <!-- CODIGO OPCIONAL -->
+                    <div class="codigoProyecto" style="display: none;">
+
+                        <pre><code>function saludar(){
+    console.log("Hola Mundo");
+}</code></pre>
+
+                        <!-- SI NO QUIERES MOSTRAR CODIGO
+                        SOLO BORRA O COMENTA TODO ESTE DIV -->
+                        
+                    </div>
+
+                    <!-- BOTONES -->
+                    <div class="acciones">
+
+                        <button>
+                            <i class="fa-regular fa-heart"></i>
+                            1.2k
+                        </button>
+
+                        <button>
+                            <i class="fa-regular fa-comment"></i>
+                            245
+                        </button>
+
+                        <button>
+                            <i class="fa-solid fa-share"></i>
+                            Compartir
+                        </button>
+
+                        <button class="codigo">
+                            <i class="fa-solid fa-code"></i>
+                            Ver código
+                        </button>
+
+                    </div>
+
+                    <!-- COMENTARIOS -->
+                    <div class="comentarios">
+
+                        <div class="inputComentario">
+
+                            <i class="fa-regular fa-face-smile"></i>
+
+                            <input type="text"
+                            placeholder="Escribe un comentario...">
+
+                            <button>
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </section>
 
         <script>
             fetch("navbar.html")

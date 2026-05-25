@@ -1,3 +1,279 @@
 body{
     background-color: black;
 }
+
+/* SECCION PRINCIPAL */
+.inicioPrincipal{
+    width: 100%;
+
+
+    padding: 70px 4%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+    radial-gradient(circle at top left, rgba(137,43,226,0.18), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(86,11,173,0.25), transparent 35%),
+    #090510;
+}
+
+/* EFECTO DE LUCES */
+.inicioPrincipal::before,
+.inicioPrincipal::after{
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    filter: blur(90px);
+
+    z-index: 1;
+
+    animation: mover 10s infinite alternate ease-in-out;
+}
+
+.inicioPrincipal::before{
+    background: rgba(158, 71, 245, 0.25);
+
+    top: -100px;
+    left: -100px;
+}
+
+.inicioPrincipal::after{
+    background: rgba(88, 28, 135, 0.35);
+
+    bottom: -120px;
+    right: -120px;
+
+    animation-duration: 14s;
+}
+
+/* ANIMACION */
+@keyframes mover{
+    from{
+        transform: translateY(0px) translateX(0px);
+    }
+
+    to{
+        transform: translateY(40px) translateX(30px);
+    }
+}
+
+/* CONTENIDO */
+.contenidoInicio{
+    width: 100%;
+    max-width: 900px;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: aparecer 1.2s ease;
+}
+
+/* TEXTO SUPERIOR */
+.textoPequeno{
+    padding: 10px 22px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    background: rgba(255,255,255,0.03);
+
+    color: #d9b8ff;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    letter-spacing: 6px;
+
+    display: inline-block;
+
+    margin-bottom: 30px;
+
+    border-radius: 50px;
+
+    backdrop-filter: blur(10px);
+}
+
+/* TITULO */
+.tituloPrincipal{
+    width: 100%;
+
+    font-size: clamp(2.7rem, 7vw, 5.5rem);
+
+    font-weight: 900;
+
+    line-height: 1.05;
+
+    color: white;
+
+    margin-bottom: 30px;
+
+    animation: subir 1s ease;
+
+  
+}
+
+/* DEGRADADO EN TEXTO */
+.tituloPrincipal{
+    background: linear-gradient(
+        90deg,
+        #ffffffb3,
+        #c084fcb3,
+        #9233eac8
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* DESCRIPCION */
+.descripcionPrincipal{
+    width: 100%;
+    max-width: 700px;
+
+    color: #cfc6dd;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+
+    line-height: 1.8;
+
+    margin-bottom: 45px;
+
+    animation: subir 1.3s ease;
+}
+
+/* BOTONES */
+.botonesInicio{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    animation: subir 1.6s ease;
+}
+
+/* BOTON */
+.botonProyecto{
+    padding: 15px 45px;
+
+    border: none;
+
+    border-radius: 60px;
+
+    background: #7e22ce9e;
+        
+
+
+    color: rgba(255, 255, 255, 0.675);
+
+    font-size: 1rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.4s ease;
+
+}
+
+/* HOVER */
+.botonProyecto:hover{
+    transform: translateY(-5px) scale(1.03);
+    background: #1c0232f6;
+    box-shadow:
+        0 0 9px rgba(209, 175, 243, 0.693);
+}
+
+/* ANIMACIONES */
+@keyframes aparecer{
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes subir{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+
+    .inicioPrincipal{
+        padding: 120px 7% 80px;
+        text-align: center;
+    }
+
+    .contenidoInicio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textoPequeno{
+        letter-spacing: 4px;
+        font-size: 0.8rem;
+    }
+
+    .descripcionPrincipal{
+        text-align: center;
+    }
+
+    .botonesInicio{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .botonProyecto{
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width:950px){
+
+    .inicioPrincipal{
+        padding: 120px 8% 80px 8%;
+    }
+
+    .contenidoInicio{
+        width: 100%;
+    }
+
+    .tituloPrincipal{
+        width: 100%;
+
+        font-size: 3.5rem;
+    }
+
+    .descripcionPrincipal{
+        width: 100%;
+    }
+
+    .botonesInicio{
+        flex-wrap: wrap;
+    }
+
+    
+}
