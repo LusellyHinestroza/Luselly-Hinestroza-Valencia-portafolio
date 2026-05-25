@@ -4,7 +4,7 @@
 
 
 /*fin menu.................................................................*/
-.acecar{
+body{
     background-color: black;
     margin: 0;
 }
@@ -16,7 +16,7 @@
     display: block;
 }
 
-.acecar .mi2{
+.mi2{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@
     gap: 50px;
 }
 
-.acecar .mi h1{
+.mi h1{
     display: flex;
     justify-content: center; /* centra vertical */
     align-items: center;     /* centra horizontal */
@@ -37,7 +37,7 @@
     gap: 60px;
 }
 
-.acecar .mi h1 span{
+.mi h1 span{
     color: #34183f;
 }
 
@@ -46,12 +46,12 @@
     color: #4e285d;
 }
 
-.acecar .mi2 p{
+.mi2 p{
     color: #f4f7fb8f;
     font-size: 20px;
     margin: 0px 0px 0px 0px;
 }
-.acecar .mi button{
+.mi button{
     color: #bd8de4;
     font-size: 20px;
     width: 395px;
@@ -62,14 +62,14 @@
     margin-top: 50px;
 }
 
-.acecar .infor{
+.infor{
     background-color: transparent;
     width: 100%;
     padding: 0px 90px 0px 0px;
     margin-bottom: 20px;
 }
 
-.acecar .crad{
+.crad{
     display: flex;
     gap: 10px;
     border: solid 0.1px #34183f;
@@ -80,7 +80,7 @@
     border-radius: 12px;
 }
 
-.acecar .contacto{
+.contacto{
     width: 100%;
     display: block;
     justify-content: center;
@@ -88,7 +88,7 @@
     background-color: transparent;
     overflow: hidden;
 }
-.acecar .contacto h3{
+.contacto h3{
     font-size: 18px;
     color: #c49de4c5 ;
     text-align: center;
@@ -102,7 +102,7 @@
     height: 0.04px;
 }
 
-.acecar .contacto a{
+.contacto a{
     display: block;
     border: solid 0.1px #34183f;
     background-color: #190a297a;
@@ -132,7 +132,7 @@
 }
 
 
-.acecar .card-status{
+.card-status{
     padding:6px;
     border-radius:12px;
     border: solid 0.1px #34183f;
@@ -144,7 +144,7 @@
 }
 
 
-.acecar .icon-box{
+.icon-box{
     border: 0.1px solid#34183f;
     background:rgba(1, 40, 22, 0.046);
     border-radius: 12px;
@@ -156,7 +156,7 @@
 
 
 
-.acecar .icon-box i{
+.icon-box i{
     font-size: 40px;
     display: flex;
     justify-content: center;
@@ -165,17 +165,18 @@
     width: 50px;
     color:#7813a0;
 }
-.acecar .text{
+.text{
     display:flex;
     flex-direction: column;
 }
-.acecar .text small{
+
+.text small{
     color:#9a47dd ;
     font-size:13px;
     margin-bottom: 5px;
 }
 
-.acecar .text h2{
+.text h2{
     margin: 0;
     color: #bd8de4;
     font-size:13px;
@@ -184,7 +185,7 @@
 
 
 
-.acecar .imagen{
+.imagen{
     margin-top: 45px;
     margin-bottom: 8px;
     width: 100%;
@@ -195,7 +196,7 @@
     overflow: hidden;
 }
 
-.acecar .imagen img{
+.imagen img{
     width: 100%;
     height: 100%;
 }

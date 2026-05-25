@@ -267,7 +267,9 @@
     position: relative;
     z-index: 1;
     background-color: #3c056d00;
+     border: solid 0.1px #903dcf00;
     padding: 5px 12px 5px 12px;
+    border-radius: 12px;
 }
 
 
@@ -330,3 +332,89 @@
     color: #bd8de4;
 }
 
+/* MOSTRAR  MENU SEGUNDARIO*/
+#menuFrame{
+    position: absolute;
+
+    top: 44px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(20px);
+
+    /* CASI TODA LA PANTALLA */
+    width: 99vw;
+
+    /* ALTURA */
+    height: 25%;
+
+   
+    
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.35s ease;
+
+    z-index: 99999;
+
+    background: transparent;
+
+    overflow: hidden;
+}
+
+/* MOSTRAR */
+.contenedorPortafolio:hover #menuFrame{
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+
+   
+/* MOSTRAR  MENU SEGUNDARIO*/
+#menuFrame{
+    position: absolute;
+
+    top: 44px;
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(20px);
+
+    /* CASI TODA LA PANTALLA */
+    width: 99vw;
+
+    /* ALTURA */
+    height: 80%;
+
+   
+    
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition: 0.35s ease;
+
+    z-index: 99999;
+
+    background: transparent;
+
+    overflow: hidden;
+}
+}

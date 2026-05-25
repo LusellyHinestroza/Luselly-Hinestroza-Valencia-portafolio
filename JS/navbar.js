@@ -6,3 +6,4 @@ function menuResponse(){
 function irEnlaces(url){
     window.open(url, "_blank")
 }
+

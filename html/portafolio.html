@@ -13,38 +13,125 @@
         
         <div id="navbar-container"></div>
         <div class="contenedor">
-            <div class="menuSegundario">
-                <div class="frontend">
-                    <h3>Desarrollo Front-End</h3>
-                    <button>Inicio</button>
-                    <button>HTML</button>
-                    <button>CSS</button>
-                </div>
-                 <div class="lenguajes">
-                    <h3>Galería de Proyectos</h3>
-                    <button>Inicio</button>
-                    <button>En desarrollo</button>
-                    <button>Proyectos básicos</button>
-                    <button>Proyectos intermedios</button>
-                    <button>Proyectos web</button>
-                    <button>Proyectos avanzados</button>
-                </div>
-                <div class="backend">
-                    <h3>Desarrollo Back-End</h3>
-                    <button>Inicio</button>
-                    <button>Java</button>
-                    <button>Python</button>
-                    <button>JavaScript</button>
-                    <button>SQL</button>
-                </div>
-            </div>
+            
             <div class="contenido">
-        
-                <p>hjgsdfgjgjgdfsgjk hjsbdjfbsdj  hshvsd hhsdhfsfsd fhsdfsfbhzxf dgdsgf  sdgfg </p>
-                <p>hjgsdfgjgjgdfsgjk hjsbdjfbsdj  hshvsd hhsdhfsfsd fhsdfsfbhzxf dgdsgf  sdgfg </p>
-                <p>hjgsdfgjgjgdfsgjk hjsbdjfbsdj  hshvsd hhsdhfsfsd fhsdfsfbhzxf dgdsgf  sdgfg </p>
-                <p>hjgsdfgjgjgdfsgjk hjsbdjfbsdj  hshvsd hhsdhfsfsd fhsdfsfbhzxf dgdsgf  sdgfg </p>
-                <p>hjgsdfgjgjgdfsgjk hjsbdjfbsdj  hshvsd hhsdhfsfsd fhsdfsfbhzxf dgdsgf  sdgfg </p>
+                <div class="card">
+
+                    <div class="video">
+                        <video autoplay loop muted playsinline>
+                            <source src="../imagenes/appi-clima.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="informacion">
+
+                        <h3>Clima App</h3>
+
+                        <p>
+                             App del clima con datos en tiempo real y diseño moderno generado por la IA.
+                        </p>
+
+                        <div class="botones">
+                         
+                            <a id="informaTargeta" onclick="mostrarTargeta()">
+                                <button class="info">
+                                    Informacion
+                                </button>
+                            </a>
+                            <a  href="https://github.com/LusellyHinestroza/weather-app.git" target="_blank">
+                                <button class="info">
+                                    Git
+                                </button>
+                            </a> 
+                            
+                            <a href="https://lusellyhinestroza.github.io/weather-app/" target="_blank">
+                                 <button class="vivo">
+                                    Ver en vivo
+                                </button>
+                            </a>
+                               
+                           
+                           
+                        </div>
+
+                        <div class="tecnologias">
+                            <div>chatGPT</div>
+                            <div>OpenWeatherMap</div>
+                            <div>javaScript</div>
+                            <div>html</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="targeta" class="targeta" >
+
+                    <div id="cerrar" onclick="cerrarTargeta()" class="cerrar">
+                        ✕
+                    </div>
+
+                    <div class="encabezado">
+
+                        <div class="imagen">
+                            <img src="https://i.postimg.cc/vZ7H6fSY/Captura-de-pantalla-2026-05-24-054726.png" alt="javascript">
+                        </div>
+
+                        <div class="titulo">
+                            <h2>App del clima</h2>
+                            <span>Proyecto generado por IA</span>
+                        </div>
+
+                        <div class="contenidos3">
+                            <div class="seccion">
+
+                                <h4>Funciones principales</h4>
+
+                                <div>
+                                    <ul>
+                                        <li>Búsqueda de ciudades en tiempo real</li>
+                                        <li>Consumo de API meteorológica</li>
+                                        <li>Interfaz moderna e interactiva</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Diseño adaptable a celulares</li>
+                                        <li>Animaciones y efectos visuales</li>
+                                    </ul> 
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="descripcion">
+
+                        <h3>Sobre el proyecto</h3>
+
+                        <p>
+                            Esta aplicación del clima fue desarrollada utilizando
+                            JavaScript moderno y consumo de APIs en tiempo real.
+                            El objetivo principal del proyecto es permitir al usuario
+                            consultar el estado del clima de cualquier ciudad del mundo
+                            de manera rápida, visual y dinámica.
+                        </p>
+
+                        <p>
+                            El sistema obtiene información meteorológica actualizada,
+                            incluyendo temperatura, humedad, velocidad del viento
+                            y condiciones climáticas generales. Además, cuenta con
+                            una interfaz moderna con animaciones y diseño responsive
+                            adaptable a diferentes dispositivos.
+                        </p>
+
+                        <p>
+                            Durante el desarrollo se trabajó en el manejo de peticiones
+                            asíncronas, validación de datos, manipulación del DOM y
+                            optimización visual para mejorar la experiencia del usuario.
+                        </p>
+
+                    </div>
+
+                </div>
 
             </div>
         </div>
