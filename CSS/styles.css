@@ -16,19 +16,15 @@ body{
 
     overflow: hidden;
 
-    background:
-    radial-gradient(circle at top left, rgba(137,43,226,0.18), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(86,11,173,0.25), transparent 35%),
-    #090510;
+   
 }
 
 /* EFECTO DE LUCES */
-.inicioPrincipal::before,
+
 .inicioPrincipal::after{
     content: "";
 
     position: absolute;
-
     width: 400px;
     height: 400px;
 
