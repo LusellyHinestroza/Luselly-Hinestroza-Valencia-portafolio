@@ -1,0 +1,483 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="../admin/admin.css">
+        <title>Portafolio luselly</title>
+    </head>
+    <body>
+        <h1 class="tituloPrincipal">CREAR CONTENIDO</h1>
+
+        <!--CREAR CV ESTUDIOS............................................................-->
+        <section class="Crear">
+            <div class="contenedorEstudios">
+                <div class="tituEstudios">
+                    <h2>CREAR ESTUDIOS</h2>
+                </div>
+                <div class="usoError" id="nombreError"></div>
+                <div class="usoError" id="profesionError"></div>
+                <div class="usoError" id="descripcionError"></div>
+                <div class="usoError" id="paginaError"></div>
+                <form id="formCrearEstudios" class="formularioEstudios">
+                    <div class="grupoInputEstudios">
+                        <label for="nombreEstudio">
+                            Nombre del lugar de estudio
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreEstudio"
+                            name="nombreEstudio"
+                            placeholder="Ej: SENA"
+                            class="form-control"
+                            maxlength="200" 
+                        >
+                    </div>
+
+                    <div class="grupoInputEstudios">
+                        <label for="nombreProfesion">
+                            Nombre de la profesión
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreProfesion"
+                            name="nombreProfesion"
+                            placeholder="Ej: Técnico en Sistemas"
+                            class="form-control"
+                            maxlength="200" 
+                        >
+                    </div>
+
+                    <div class="descripcionEstudio">
+                        <label for="descripcionEstudio">
+                            Descripción de la profesión
+                        </label>
+
+                        <textarea 
+                            id="descripcionEstudio"
+                            name="descripcionEstudio"
+                            placeholder="Describe tus estudios......"
+                            class="form-control"
+                            rows="8"
+                            
+                        ></textarea>
+                    </div>
+
+                    <div class="grupoInputEstudio">
+                        <label for="paginaEstudio">
+                            Página o enlace relacionado
+                        </label>
+
+                        <input 
+                            type="url"
+                            id="paginaEstudio"
+                            name="paginaEstudio"
+                            class="form-control"
+                            placeholder="https://ejemplo.com"
+                        >
+                    </div>
+
+                    <button type="submit" class="btnCrearEstudio">
+                        Guardar contenido
+                    </button>
+                </form>
+            </div>
+
+
+            <!--ESPERIENCIA.....................................................................-->
+            <div class="contenedorEsperiencia">
+                <div class="tituloEsperiencia">
+                    <h2>CREAR ESPERIENCIA</h2>
+                </div>
+                <form class="formularioEsperiencia">
+                    <div class="grupoInputEsperiencia">
+                        <label for="nombreEsperiencia">
+                            Nombre del lugar de trabajo
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreEsperiencia"
+                            name="nombreEsperiencia"
+                            placeholder="Ej: KRIKA"
+                            maxlength="200" 
+                            required
+                        >
+                    </div>
+
+                    <div class="grupoInput">
+                        <label for="nombreCargo">
+                            Nombre del cargo
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreCargo"
+                            name="nombreCargo"
+                            placeholder="Ej: Técnico en Sistemas"
+                            maxlength="200"
+                            required
+                        >
+                    </div>
+
+                    <div class="grupoInput">
+                        <label for="descripcionEsperiencia">
+                            Descripción de la profesión
+                        </label>
+
+                        <textarea 
+                            id="descripcionEsperiencia"
+                            name="descripcionEsperiencia"
+                            placeholder="Describe tus experiencia..."
+                            rows="8"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btnCrearEsperiencia">
+                        Guardar contenido
+                    </button>
+                </form>
+
+            </div>
+
+            <!--HABILIDAD.........................................................................-->
+            <div class="contenedorHabilidad">
+                <div class="tituloHabilidad">
+                    <h2>CREAR HABILIDAD</h2>
+                </div>
+                <form class="formularioHabilidad">
+                    <div class="grupoInputHabilidad">
+                        <label for="nombreHabilidad">
+                            Nombre de la habilidad
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreHabilidad"
+                            name="nombreHabilidad"
+                            placeholder="Ej: Krika"
+                            maxlength="200"
+                            required
+                        >
+                    </div>
+
+                     <div class="grupoInput">
+                        <label for="descripcionHabilidad">
+                            Descripción de la hablidad
+                        </label>
+
+                        <textarea 
+                            id="descripcionHabilidad"
+                            name="descripcionHabilidad"
+                            placeholder="Describe tu habilidad..."
+                            rows="8"
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <div class="grupoInputHabilidad">
+                        <label for="paginaHabilidad">
+                            Enlace de la imagen
+                        </label>
+
+                        <input 
+                            type="url"
+                            id="paginaHabilidad"
+                            name="paginaHabilidad"
+                            placeholder="https://ejemplo.com"
+                        >
+                    </div>
+
+                    <button type="submit" class="btnCrearHabilidad">
+                        Guardar contenido
+                    </button>
+                </form>
+
+            </div>
+        
+
+        <!--publicaciones....................................................................-->
+
+        
+
+            <div class="contenedorPublicaciones">
+                <div class="tituloPublicaciones">
+                    <h2>CREAR PUBLICACION</h2>
+                </div>
+                <form class="formularioPublicaciones">
+
+                    <div class="grupoInputPublicaciones">
+                        <label for="paginaPublicaciones">
+                            Enlace de la imagen
+                        </label>
+
+                        <input 
+                            type="url"
+                            id="paginaPublicaciones"
+                            name="paginaPublicaciones"
+                            placeholder="https://ejemplo.com"
+                        >
+                    </div>
+                    <div class="grupoInputPublicaciones">
+                        <label for="nombrePublicaciones">
+                            Nombre del proyecto
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombrePublicaciones"
+                            name="nombrePublicaciones"
+                            placeholder="Ej: Calculadora"
+                            maxlength="200" 
+                            required
+                        >
+                    </div>
+
+                    <div class="grupoInputPublicaciones">
+                        <label for="nombrePublicaciones">
+                            Nombre del lenguaje
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombrePublicaciones"
+                            name="nombrePublicaciones"
+                            placeholder="Ej: HTML"
+                            required
+                        >
+                    </div>
+
+                     <div class="grupoInput">
+                        <label for="descripcionPublicaciones">
+                            Descripción de tu codigo
+                        </label>
+
+                        <textarea 
+                            id="descripcionPublicaciones"
+                            name="descripcionPublicaciones"
+                            placeholder="Describe tu codigo..."
+                            rows="8"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="grupoInputPublicaciones">
+                        <label for="paginaPublicaciones">
+                            Enlace de la imagen
+                        </label>
+
+                        <input 
+                            type="url"
+                            id="paginaPublicaciones"
+                            name="paginaPublicaciones"
+                            placeholder="https://ejemplo.com"
+                        >
+                    </div>
+
+                    <div class="grupoInputPublicaciones">
+                        <label for="videoPublicaciones">
+                            Seleccionar video
+                        </label>
+
+                        <input 
+                            type="file"
+                            id="videoPublicaciones"
+                            name="videoPublicaciones"
+                            accept="video/*"
+                        >
+                    </div>
+                    <div class="grupoInputPublicaciones">
+                        <label for="videoPublicaciones">
+                            Enlace del video
+                        </label>
+
+                        <input 
+                            type="url"
+                            id="videoPublicaciones"
+                            name="videoPublicaciones"
+                            placeholder="https://youtube.com/watch?v=..."
+                        >
+                    </div>
+                    <div class="grupoInputPublicaciones">
+                        <label for="codigoPublicaciones">
+                            Código del proyecto
+                        </label>
+
+                        <textarea 
+                            id="codigoPublicaciones"
+                            name="codigoPublicaciones"
+                            placeholder="Escribe tu código aquí..."
+                            rows="8"
+                        ></textarea>
+                    </div>
+                    <button type="submit" class="btnCrearPublicaciones">
+                        Guardar contenido
+                    </button>
+                </form>
+
+            </div>
+
+        
+
+        <!--SEPCION PORTAFOLIO CARDS..........................................................-->
+       
+
+            <div class="contenedorCards">
+                <div class="tituloCards">
+                    <h2>CREAR CARDS</h2>
+                </div>
+                <form class="formularioCards">
+
+                    <div class="grupoInputCards">
+                        <label for="videoCards">
+                            Seleccionar video
+                        </label>
+
+                        <input 
+                            type="file"
+                            id="videoCards"
+                            name="videoCards"
+                            accept="video/*"
+                        >
+                    </div>
+                    <div class="grupoInputCards">
+                        <label for="videoCards">
+                            Enlace del video
+                        </label>
+
+                        <input 
+                            type="url"
+                            id="videoCards"
+                            name="videoCards"
+                            placeholder="https://youtube.com/watch?v=..."
+                        >
+                    </div>
+
+                    <div class="grupoInputCards">
+                        <label for="nombreCards">
+                            Nombre del proyecto
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreCards"
+                            name="nombreCards"
+                            placeholder="Ej: Calculadora"
+                            maxlength="200" required
+
+                        >
+                    </div>
+                    <div class="grupoInput">
+                        <label for="descripcionCards">
+                            Descripción de tu codigo
+                        </label>
+                        <textarea 
+                            id="descripcionCards"
+                            name="descripcionCards"
+                            placeholder="Describe tu proyecto..."
+                            rows="8"
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="grupoInputCards">
+                        <label for="paginaCards">
+                            Enlace del git
+                        </label>
+
+                        <input 
+                            type="url"
+                            id="paginaCards"
+                            name="paginaCards"
+                            placeholder="https://ejemplo.com"
+                        >
+                    </div>
+                    <div class="grupoInputCards">
+                        <label for="paginaCards">
+                            Página o enlace relacionado
+                        </label>
+
+                        <input 
+                            type="url"
+                            id="paginaCards"
+                            name="paginaCards"
+                            placeholder="https://ejemplo.com"
+                        >
+                    </div>
+
+                    <div class="grupoInputCards">
+                        <label for="nombreCards">
+                            Nombre del lenguaje 1
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreCards"
+                            name="nombreCards"
+                            placeholder="Ej: HTML"
+                            maxlength="200"
+                            
+                        >
+                    </div>
+                    <div class="grupoInputCards">
+                        <label for="nombreCards">
+                            Nombre del lenguaje 2
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreCards"
+                            name="nombreCards"
+                            placeholder="Ej: HTML"
+                            maxlength="200"
+                            
+                        >
+                    </div>
+                    <div class="grupoInputCards">
+                        <label for="nombreCards">
+                            Nombre del lenguaje 3
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreCards"
+                            name="nombreCards"
+                            placeholder="Ej: HTML"
+                            maxlength="200"
+                            
+                        >
+                    </div>
+                    <div class="grupoInputCards">
+                        <label for="nombreCards">
+                            Nombre del lenguaje 4
+                        </label>
+
+                        <input 
+                            type="text"
+                            id="nombreCards"
+                            name="nombreCards"
+                            placeholder="Ej: HTML"
+                            maxlength="200"
+                            
+                        >
+                    </div>
+                    <button type="submit" class="btnCrearCards">
+                        Guardar contenido
+                    </button>
+                </form>
+
+            </div>
+
+            
+
+        </section>
+         
+
+
+    <script src="./admin.js"></script> 
+    </body>
+</html>

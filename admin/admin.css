@@ -1,0 +1,343 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#020617,#0f172a,#1e293b);
+    padding: 40px;
+    color: white;
+}
+
+/* TITULO PRINCIPAL */
+.tituloPrincipal{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+}
+
+
+/* CONTENEDOR GENERAL */
+.Crear{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+/* TARJETAS */
+.contenedorEstudios,
+.contenedorEsperiencia,
+.contenedorHabilidad,
+.contenedorPublicaciones,
+.contenedorCards{
+    width: 100%;
+    max-width: 520px;
+    background: rgba(30,41,59,0.95);
+    border: 1px solid #334155;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.contenedorEstudios:hover,
+.contenedorEsperiencia:hover,
+.contenedorHabilidad:hover,
+.contenedorPublicaciones:hover,
+.contenedorCards:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(56,189,248,0.3);
+}
+
+/* SUBTITULOS */
+.tituEstudios,
+.tituloEsperiencia,
+.tituloHabilidad,
+.tituloPublicaciones,
+.tituloCards{
+    margin-bottom: 30px;
+}
+
+.tituEstudios h2,
+.tituloEsperiencia h2,
+.tituloHabilidad h2,
+.tituloPublicaciones h2,
+.tituloCards h2{
+    color: #d9e1ea;
+    line-height: 1.6;
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+
+
+/* INPUTS */
+.grupoInputEstudios,
+.grupoInputEstudio,
+.grupoInputHabilidad,
+.grupoInputEsperiencia,
+.grupoInputCards,
+.grupoInput,
+.grupoInputPublicaciones,
+.descripcionEstudio{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/*NOMBRE ESTUDIO*/
+#nombreEstudio{
+    width: 100% !important;
+    padding: 14px !important;
+    border-radius: 15px !important;
+    border: 1px solid #475569 !important;
+    background: #334155 !important;
+    color: white !important;
+}
+
+#nombreEstudio.is-invalid{
+    border: 2px solid red !important;
+}
+
+#nombreEstudio.is-valid{
+    border: 2px solid limegreen !important;
+}
+
+
+/*NOMBRE PROFECION*/
+#nombreProfesion{
+    width: 100% !important;
+    padding: 14px !important;
+    border-radius: 15px !important;
+    border: 1px solid #475569 !important;
+    background: #334155 !important;
+    color: white !important;
+}
+
+#nombreProfesion.is-invalid{
+    border: 2px solid red !important;
+}
+
+#nombreProfesion.is-valid{
+    border: 2px solid limegreen !important;
+}
+
+
+/*DESCRIPCION*/
+#descripcionEstudio{
+    width: 100% !important;
+    padding: 14px !important;
+    border-radius: 15px !important;
+    border: 1px solid #475569 !important;
+    background: #334155 !important;
+    color: white !important;
+}
+
+#descripcionEstudio.is-invalid{
+    border: 2px solid red !important;
+}
+
+#descripcionEstudio.is-valid{
+    border: 2px solid limegreen !important;
+}
+
+/*ENLACE*/
+#paginaEstudio{
+    width: 100% !important;
+    padding: 14px !important;
+    border-radius: 15px !important;
+    border: 1px solid #475569 !important;
+    background: #334155 !important;
+    color: white !important;
+}
+
+#paginaEstudio.is-invalid{
+    border: 2px solid red !important;
+}
+
+#paginaEstudio.is-valid{
+    border: 2px solid limegreen !important;
+}
+
+
+/* LABELS */
+label{
+    font-size: 0.95rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+/* INPUT Y TEXTAREA */
+input,
+textarea{
+    width: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #475569;
+    background: #334155;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* PLACEHOLDER */
+input::placeholder,
+textarea::placeholder{
+    color: #94a3b8;
+}
+
+/* FOCUS */
+input:focus,
+textarea:focus{
+    border: 1px solid #38bdf8;
+    box-shadow: 0 0 12px rgba(56,189,248,0.5);
+    background: #3b475a;
+}
+
+/* TEXTAREA */
+textarea{
+    resize: none;
+    min-height: 120px;
+}
+
+/* BOTONES */
+.btnCrearEstudio,
+.btnCrearEsperiencia,
+.btnCrearHabilidad,
+.btnCrearPublicaciones,
+.btnCrearCards{
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg,#06b6d4,#3b82f6);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btnCrearEstudio:hover,
+.btnCrearEsperiencia:hover,
+.btnCrearHabilidad:hover,
+.btnCrearCards:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(56,189,248,0.7);
+}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+
+    .cvCrear{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media(max-width:700px){
+
+    body{
+        padding: 20px;
+    }
+
+    .tituloPrincipal{
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+
+    .contenedorEstudios,
+    .contenedorEsperiencia{
+        padding: 25px;
+    }
+
+}
+
+/*INPUT VIDEO..............*/
+/* INPUT FILE */
+input[type="file"]{
+    width: 100%;
+    padding: 14px;
+    border-radius: 15px;
+    border: 1px solid #475569;
+    background: #334155;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* EFECTO */
+input[type="file"]:focus{
+    border: 1px solid #38bdf8;
+    box-shadow: 0 0 12px rgba(56,189,248,0.5);
+}
+
+/* BOTON INTERNO */
+input[type="file"]::file-selector-button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#06b6d4,#3b82f6);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+input[type="file"]::file-selector-button:hover{
+    transform: scale(1.05);
+}
+
+/*MANEJO DE ERROR*/
+.usoError{
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 15px;
+    border-radius: 12px;
+    background: rgba(239,68,68,0.12);
+    border: 1px solid #ef4444;
+    color: #fca5a5;
+    font-size: 0.95rem;
+    font-weight: 500;
+    display: none;
+    animation: aparecerError 0.3s ease;
+}
+
+/* MOSTRAR ERROR */
+.usoError.active{
+    display: block;
+}
+
+/* ANIMACION */
+@keyframes aparecerError{
+
+    from{
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

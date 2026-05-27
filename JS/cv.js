@@ -196,3 +196,31 @@ createPlexus(document.getElementById('canvasRight'), {
     accentColor:  [141, 61, 207],   // #8d3dcf
     nodeAlpha:    0.90,
 });
+
+
+/*AGREGAR IMFORMACION .........................................................................*/
+
+/*ESTUDIOS...................................................*/
+function crearEstudios(informacion){
+    const cajonEstudios = document.createElement("div");
+    cajonEstudios.innerHTML =`
+    
+        <div class="estidio">
+                                    
+            <h3>SENA</h3>
+            <h2>Tecnico en sistemas</h2>
+            <p>
+                Durante mi formación en el SENA como Técnica en Sistemas, adquirí conocimientos
+                en mantenimiento preventivo de equipos de cómputo,  también desarrollé
+                habilidades en diagnóstico y solución de fallas, optimización del rendimiento de
+                los equipos y soporte técnico al usuario. Esta experiencia me permitió
+                fortalecer mi capacidad de análisis, organización y servicio, preparándome para
+                brindar soluciones efectivas en entornos tecnológicos.
+            </p>       
+            <button onclick="irEnlaces('https://betowa.sena.edu.co/oferta')">Más sobre Sena</button>                 
+        
+        </div>
+    
+    `;
+    
+}
