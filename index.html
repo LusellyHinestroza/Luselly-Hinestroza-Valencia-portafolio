@@ -52,7 +52,7 @@
         </section>
 
         <script>
-            fetch("/html/navbar.html")
+            fetch("./html/navbar.html")
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("navbar-container").innerHTML = data;
@@ -60,6 +60,7 @@
         </script>
         <script src="./JS/navbar.js"></script>
         <script src="app.js"></script>
+       
         
     </body>
 </html>
