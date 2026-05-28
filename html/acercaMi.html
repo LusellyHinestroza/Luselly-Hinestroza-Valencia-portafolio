@@ -10,8 +10,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
         <title>Portafolio luselly</title>
-        <link rel="stylesheet" href="../CSS/acercaMi.css">
-        <link rel="stylesheet" href="../CSS/navbar.css">
+        <link rel="stylesheet" href="CSS\acercaMi.css">
+        <link rel="stylesheet" href="CSS\navbar.css">
     </head>
     <body>
         <div id="navbar-container"></div>
@@ -140,13 +140,13 @@
         </section>
         
         <script>
-            fetch("navbar.html")
+            fetch("html\navbar.html")
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById("navbar-container").innerHTML = data;
                 });
         </script>
-        <script src="../JS/navbar.js"></script>
-        <script src="../JS/acercaMi.js"></script>
+        <script src="JS\navbar.js"></script>
+        <script src="JS\acercaMi.js"></script>
     </body>
 </html>
