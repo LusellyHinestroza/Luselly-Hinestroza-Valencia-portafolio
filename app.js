@@ -446,16 +446,8 @@ document.getElementById("navbar-container").innerHTML = navbar;
 
 */
 
-// 1. Obtener la base de la URL actual de forma limpia
-const base = window.location.origin;
-
-// 2. Detectar si estamos en GitHub Pages para agregar el nombre del repositorio
-const repoName = window.location.pathname.startsWith('/Luselly-Hinestroza-Valencia-portafolio') 
-    ? '/Luselly-Hinestroza-Valencia-portafolio/' 
-    : '/';
-
-// 3. Crear la URL raíz absoluta del proyecto
-const rootUrl = `${base}${repoName}`;
+// Definimos la dirección web exacta de tu repositorio en GitHub Pages
+const URL_BASE = "https://github.io";
 
 const navbar = `
     <header>
@@ -463,38 +455,38 @@ const navbar = `
             <div class="menu-resP" id="menu-resP" onclick="menuResponse()">☰</div>
             <nav class="menu" id="menu">
                 
-                <!-- Enlace de Inicio apuntando directo a la raíz -->
-                <a href="${rootUrl}index.html">
-                    <img src="${rootUrl}imagenes/inicio.png" alt="inicio">Inicio
+                <!-- Enlace de Inicio -->
+                <a href="${URL_BASE}index.html">
+                    <img src="${URL_BASE}imagenes/inicio.png" alt="inicio">Inicio
                 </a>
                 
                 <div class="contenedorPortafolio">
-                    <a class="itemMenu" href="${rootUrl}html/portafolio.html">  
-                        <img src="${rootUrl}imagenes/portafolio.png" alt="portafolio">
+                    <a class="itemMenu" href="${URL_BASE}html/portafolio.html">  
+                        <img src="${URL_BASE}imagenes/portafolio.png" alt="portafolio">
                         Portafolio
                     </a>
 
                     <iframe
                         id="menuFrame"
-                        src="${rootUrl}html/menuSeugundario.html">
+                        src="${URL_BASE}html/menuSeugundario.html">
                     </iframe>
                 </div>
 
-                <!-- Enlaces a las subpáginas con rutas absolutas fijas -->
-                <a href="${rootUrl}html/acercaMi.html">
-                    <img src="${rootUrl}imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi
+                <!-- Enlaces a las subpáginas -->
+                <a href="${URL_BASE}html/acercaMi.html">
+                    <img src="${URL_BASE}imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi
                 </a>
-                <a href="${rootUrl}html/publicaciones.html">
-                    <img src="${rootUrl}imagenes/publicaciones.png" alt="cv">Publicaciones
+                <a href="${URL_BASE}html/publicaciones.html">
+                    <img src="${URL_BASE}imagenes/cv.png" alt="cv">Publicaciones
                 </a>
                 
-                <!-- Mantén "cv html" con espacio si aún no lo has renombrado en GitHub -->
-                <a href="${rootUrl}html/cv.html">
-                    <img src="${rootUrl}imagenes/cv.png" alt="cv">Sección de CV
+                <!-- Enlace a la sección CV (Ajustado al nombre real en tu Git con espacio "cv html") -->
+                <a href="${URL_BASE}html/cv html">
+                    <img src="${URL_BASE}imagenes/cv.png" alt="cv">Sección de CV
                 </a>
             </nav>
             <div class="cvlogo">
-                <a href="${rootUrl}imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv">Descargar CV</a>
+                <a href="${URL_BASE}imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv">Descargar CV</a>
                 <p class="nombre">Luselly Hinestroza Valencia</p>
             </div>
         </div> 
@@ -502,3 +494,4 @@ const navbar = `
 `;
 
 document.getElementById("navbar-container").innerHTML = navbar;
+
