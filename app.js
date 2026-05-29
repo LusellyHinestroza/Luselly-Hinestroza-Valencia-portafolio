@@ -405,7 +405,7 @@ const navbar = `
                 <div class="areglosnav">
                     <div class="menu-resP" onclick="menuResponse()">☰</div>
                     <nav class="menu" id="menu">
-                        <a href="/index.html"><img src="./imagenes/inicio.png" alt="inicio">Inicio</a>
+                        <a href="./index.html"><img src="./imagenes/inicio.png" alt="inicio">Inicio</a>
                         <!-- BOTON -->
                         <div class="contenedorPortafolio">
 
