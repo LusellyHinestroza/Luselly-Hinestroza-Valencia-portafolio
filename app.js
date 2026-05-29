@@ -466,27 +466,27 @@ const navbar = `
                 </a>
                 
                 <div class="contenedorPortafolio">
-                    <a class="itemMenu" href="${prefix}${folderPrefix}portafolio.html">  
+                    <a class="itemMenu" href="${prefix}html/portafolio.html">  
                         <img src="${prefix}imagenes/portafolio.png" alt="portafolio">
                         Portafolio
                     </a>
 
                     <iframe
                         id="menuFrame"
-                        src="${prefix}${folderPrefix}menuSeugundario.html">
+                        src="${prefix}html/menuSeugundario.html">
                     </iframe>
                 </div>
 
                 <!-- Enlaces a las subpáginas -->
-                <a href="${prefix}${folderPrefix}acercaMi.html">
+                <a href="${prefix}html/acercaMi.html">
                     <img src="${prefix}imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi
                 </a>
-                <a href="${prefix}${folderPrefix}publicaciones.html">
+                <a href="${prefix}html/publicaciones.html">
                     <img src="${prefix}imagenes/cv.png" alt="cv">Publicaciones
                 </a>
                 
                 <!-- Si corregiste el espacio de "cv html" a "cv.html", cámbialo aquí también -->
-                <a href="${prefix}${folderPrefix}cv html">
+                <a href="${prefix}html/cv.html">
                     <img src="${prefix}imagenes/cv.png" alt="cv">Sección de CV
                 </a>
             </nav>
