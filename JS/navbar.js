@@ -8,7 +8,7 @@ function irEnlaces(url){
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const response = await fetch("../html/navbar.html");
+    const response = await fetch("JS\navbar.js");
     const html = await response.text();
 
     document.getElementById("navbar-container").innerHTML = html;
