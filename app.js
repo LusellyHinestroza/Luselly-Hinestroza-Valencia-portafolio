@@ -405,11 +405,11 @@ const navbar = `
                 <div class="areglosnav">
                     <div class="menu-resP" onclick="menuResponse()">☰</div>
                     <nav class="menu" id="menu">
-                        <a href="index.html"><img src="./imagenes/inicio.png" alt="inicio">Inicio</a>
+                        <a href="/index.html"><img src="./imagenes/inicio.png" alt="inicio">Inicio</a>
                         <!-- BOTON -->
                         <div class="contenedorPortafolio">
 
-                            <a class="itemMenu" href="./html/portafolio.html">  
+                            <a class="itemMenu" href="/html/portafolio.html">  
                                 <img src="./imagenes/portafolio.png" alt="portafolio">
                                 Portafolio
                             </a>
@@ -417,13 +417,13 @@ const navbar = `
                             <!-- MENU -->
                             <iframe
                                 id="menuFrame"
-                                src="./html/menuSeugundario.html">
+                                src="/html/menuSeugundario.html">
                             </iframe>
 
                         </div>
-                        <a href="./html/acercaMi.html"><img src="./imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
-                        <a href="./html/publicaciones.html"><img src="./imagenes/publicaciones.png" alt="cv">Publicaciones</a>
-                        <a  href="./html/cv.html"><img src="./imagenes/cv.png" alt="cv">Secion de CV</a>
+                        <a href="/html/acercaMi.html"><img src="./imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
+                        <a href="/html/publicaciones.html"><img src="./imagenes/publicaciones.png" alt="cv">Publicaciones</a>
+                        <a  href="/html/cv.html"><img src="./imagenes/cv.png" alt="cv">Secion de CV</a>
                     </nav>
                     <div class="cvlogo">
                         <a href="./imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv">Descargar CV</a>
