@@ -397,7 +397,15 @@ function draw(){
 draw();
 
 */
+function menuResponse(){
+    document.getElementById("menu").classList.toggle("active");
+    document.getElementById("menu-resP").classList.toggle("active");
+}
 
+function irEnlaces(url){
+    window.open(url, "_blank")
+}
+/*
 
 const navbar = `
 
@@ -436,11 +444,58 @@ const navbar = `
 document.getElementById("navbar-container").innerHTML = navbar;
 
 
-function menuResponse(){
-    document.getElementById("menu").classList.toggle("active");
-    document.getElementById("menu-resP").classList.toggle("active");
-}
+*/
 
-function irEnlaces(url){
-    window.open(url, "_blank")
-}
+// 1. Detectar inteligentemente si la página actual está dentro de la carpeta "html"
+const isInHtmlFolder = window.location.pathname.includes('/html/');
+
+// 2. Definir el prefijo según la ubicación actual del usuario
+const prefix = isInHtmlFolder ? '../' : '';         // Si está dentro, retrocede un nivel (../)
+const folderPrefix = isInHtmlFolder ? '' : 'html/';  // Si está fuera, añade la carpeta (html/)
+
+// 3. Crear el navbar dinámico usando los prefijos calculados
+const navbar = `
+    <header>
+        <div class="areglosnav">
+            <div class="menu-resP" id="menu-resP" onclick="menuResponse()">☰</div>
+            <nav class="menu" id="menu">
+                
+                <!-- Enlace de Inicio -->
+                <a href="${prefix}index.html">
+                    <img src="${prefix}imagenes/inicio.png" alt="inicio">Inicio
+                </a>
+                
+                <div class="contenedorPortafolio">
+                    <a class="itemMenu" href="${prefix}${folderPrefix}portafolio.html">  
+                        <img src="${prefix}imagenes/portafolio.png" alt="portafolio">
+                        Portafolio
+                    </a>
+
+                    <iframe
+                        id="menuFrame"
+                        src="${prefix}${folderPrefix}menuSeugundario.html">
+                    </iframe>
+                </div>
+
+                <!-- Enlaces a las subpáginas -->
+                <a href="${prefix}${folderPrefix}acercaMi.html">
+                    <img src="${prefix}imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi
+                </a>
+                <a href="${prefix}${folderPrefix}publicaciones.html">
+                    <img src="${prefix}imagenes/cv.png" alt="cv">Publicaciones
+                </a>
+                
+                <!-- Si corregiste el espacio de "cv html" a "cv.html", cámbialo aquí también -->
+                <a href="${prefix}${folderPrefix}cv html">
+                    <img src="${prefix}imagenes/cv.png" alt="cv">Sección de CV
+                </a>
+            </nav>
+            <div class="cvlogo">
+                <a href="${prefix}imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv">Descargar CV</a>
+                <p class="nombre">Luselly Hinestroza Valencia</p>
+            </div>
+        </div> 
+    </header>
+`;
+
+document.getElementById("navbar-container").innerHTML = navbar;
