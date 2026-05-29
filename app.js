@@ -489,7 +489,7 @@ const navbar = `
                 </a>
                 
                 <!-- Mantén "cv html" con espacio si aún no lo has renombrado en GitHub -->
-                <a href="${rootUrl}html/cv html">
+                <a href="${rootUrl}html/cv.html">
                     <img src="${rootUrl}imagenes/cv.png" alt="cv">Sección de CV
                 </a>
             </nav>
