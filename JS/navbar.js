@@ -18,7 +18,7 @@ const navbar = `
                         <!-- BOTON -->
                         <div class="contenedorPortafolio">
 
-                            <a class="itemMenu" href="/html/portafolio.html">
+                            <a class="itemMenu" href="./html/portafolio.html">
                                 <img src="/imagenes/portafolio.png" alt="portafolio">
                                 Portafolio
                             </a>
