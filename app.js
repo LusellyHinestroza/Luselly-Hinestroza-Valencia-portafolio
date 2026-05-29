@@ -409,15 +409,15 @@ const navbar = `
                         <!-- BOTON -->
                         <div class="contenedorPortafolio">
 
-                            <a class="itemMenu" href="html/portafolio.html">  
-                                <img src="./imagenes/portafolio.png" alt="portafolio">
+                            <a class="itemMenu" href="/html/portafolio.html">  
+                                <img src="/imagenes/portafolio.png" alt="portafolio">
                                 Portafolio
                             </a>
 
                             <!-- MENU -->
                             <iframe
                                 id="menuFrame"
-                                src="/html/menuSeugundario.html">
+                                src="./html/menuSeugundario.html">
                             </iframe>
 
                         </div>
