@@ -10,14 +10,6 @@ function menuResponse(){
 
 
 
-
-
-/*fodo..................................................................................*/
-
-
-const canvas = document.getElementById('starfield');
-const ctx = canvas.getContext('2d');
-
 /* resize */
 
 function resize(){
