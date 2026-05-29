@@ -401,11 +401,11 @@ function menuResponse(){
     document.getElementById("menu").classList.toggle("active");
     document.getElementById("menu-resP").classList.toggle("active");
 }
-
+/*
 function irEnlaces(url){
     window.open(url, "_blank")
 }
-/*
+
 
 const navbar = `
 
@@ -446,52 +446,55 @@ document.getElementById("navbar-container").innerHTML = navbar;
 
 */
 
-// 1. Detectar inteligentemente si la página actual está dentro de la carpeta "html"
-const isInHtmlFolder = window.location.pathname.includes('/html/');
+// 1. Obtener la base de la URL actual de forma limpia
+const base = window.location.origin;
 
-// 2. Definir el prefijo según la ubicación actual del usuario
-const prefix = isInHtmlFolder ? '../' : '';         // Si está dentro, retrocede un nivel (../)
-const folderPrefix = isInHtmlFolder ? '' : 'html/';  // Si está fuera, añade la carpeta (html/)
+// 2. Detectar si estamos en GitHub Pages para agregar el nombre del repositorio
+const repoName = window.location.pathname.startsWith('/Luselly-Hinestroza-Valencia-portafolio') 
+    ? '/Luselly-Hinestroza-Valencia-portafolio/' 
+    : '/';
 
-// 3. Crear el navbar dinámico usando los prefijos calculados
+// 3. Crear la URL raíz absoluta del proyecto
+const rootUrl = `${base}${repoName}`;
+
 const navbar = `
     <header>
         <div class="areglosnav">
             <div class="menu-resP" id="menu-resP" onclick="menuResponse()">☰</div>
             <nav class="menu" id="menu">
                 
-                <!-- Enlace de Inicio -->
-                <a href="${prefix}index.html">
-                    <img src="${prefix}imagenes/inicio.png" alt="inicio">Inicio
+                <!-- Enlace de Inicio apuntando directo a la raíz -->
+                <a href="${rootUrl}index.html">
+                    <img src="${rootUrl}imagenes/inicio.png" alt="inicio">Inicio
                 </a>
                 
                 <div class="contenedorPortafolio">
-                    <a class="itemMenu" href="${prefix}${folderPrefix}portafolio.html">  
-                        <img src="${prefix}imagenes/portafolio.png" alt="portafolio">
+                    <a class="itemMenu" href="${rootUrl}html/portafolio.html">  
+                        <img src="${rootUrl}imagenes/portafolio.png" alt="portafolio">
                         Portafolio
                     </a>
 
                     <iframe
                         id="menuFrame"
-                        src="${prefix}${folderPrefix}menuSeugundario.html">
+                        src="${rootUrl}html/menuSeugundario.html">
                     </iframe>
                 </div>
 
-                <!-- Enlaces a las subpáginas -->
-                <a href="${prefix}${folderPrefix}acercaMi.html">
-                    <img src="${prefix}imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi
+                <!-- Enlaces a las subpáginas con rutas absolutas fijas -->
+                <a href="${rootUrl}html/acercaMi.html">
+                    <img src="${rootUrl}imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi
                 </a>
-                <a href="${prefix}${folderPrefix}publicaciones.html">
-                    <img src="${prefix}imagenes/cv.png" alt="cv">Publicaciones
+                <a href="${rootUrl}html/publicaciones.html">
+                    <img src="${rootUrl}imagenes/publicaciones.png" alt="cv">Publicaciones
                 </a>
                 
-                <!-- Si corregiste el espacio de "cv html" a "cv.html", cámbialo aquí también -->
-                <a href="${prefix}${folderPrefix}cv html">
-                    <img src="${prefix}imagenes/cv.png" alt="cv">Sección de CV
+                <!-- Mantén "cv html" con espacio si aún no lo has renombrado en GitHub -->
+                <a href="${rootUrl}html/cv html">
+                    <img src="${rootUrl}imagenes/cv.png" alt="cv">Sección de CV
                 </a>
             </nav>
             <div class="cvlogo">
-                <a href="${prefix}imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv">Descargar CV</a>
+                <a href="${rootUrl}imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv">Descargar CV</a>
                 <p class="nombre">Luselly Hinestroza Valencia</p>
             </div>
         </div> 
