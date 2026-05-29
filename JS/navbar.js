@@ -19,23 +19,23 @@ const navbar = `
                         <div class="contenedorPortafolio">
 
                             <a class="itemMenu" href="./html/portafolio.html">
-                                <img src="/imagenes/portafolio.png" alt="portafolio">
+                                <img src="./imagenes/portafolio.png" alt="portafolio">
                                 Portafolio
                             </a>
 
                             <!-- MENU -->
                             <iframe
                                 id="menuFrame"
-                                src="/html/menuSeugundario.html">
+                                src="./html/menuSeugundario.html">
                             </iframe>
 
                         </div>
-                        <a href="/html/acercaMi.html"><img src="/imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
-                        <a href="/html/publicaciones.html"><img src="/imagenes/publicaciones.png" alt="cv">Publicaciones</a>
-                        <a  href="/html/cv.html"><img src="/imagenes/cv.png" alt="cv">Secion de CV</a>
+                        <a href="./html/acercaMi.html"><img src="./imagenes/acercademi.png" alt="acercaDeMi">Acerca de mi</a>
+                        <a href="./html/publicaciones.html"><img src="./imagenes/publicaciones.png" alt="cv">Publicaciones</a>
+                        <a  href="./html/cv.html"><img src="./imagenes/cv.png" alt="cv">Secion de CV</a>
                     </nav>
                     <div class="cvlogo">
-                        <a href="/imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv">Descargar CV</a>
+                        <a href="./imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf" download class="btn-cv">Descargar CV</a>
                         <p class="nombre">Luselly Hinestroza Valencia</p>
                     </div>
                 </div> 
