@@ -12,13 +12,13 @@ function menuResponse(){
 
 
 
-/*fodo..................................................................................*/
+/*fodo..................................................................................
 
 
 const canvas = document.getElementById('starfield');
 const ctx = canvas.getContext('2d');
 
-/* resize */
+/* resize
 
 function resize(){
   canvas.width = window.innerWidth;
@@ -32,7 +32,7 @@ window.addEventListener('resize', () => {
   initStars();
 });
 
-/* capas */
+/* capas 
 
 const LAYERS = [
 
@@ -67,13 +67,13 @@ const LAYERS = [
 
 let stars = [];
 
-/* random */
+/* random 
 
 function rand(min,max){
   return min + Math.random() * (max - min);
 }
 
-/* crear estrella */
+/* crear estrella 
 
 function makeStar(layer){
 
@@ -114,7 +114,7 @@ function makeStar(layer){
 
 }
 
-/* iniciar estrellas */
+/* iniciar estrellas 
 
 function initStars(){
 
@@ -134,7 +134,7 @@ function initStars(){
 
 initStars();
 
-/* estrellas fugaces */
+/* estrellas fugaces
 
 let shooters = [];
 
@@ -178,11 +178,11 @@ setTimeout(
   rand(1500,3000)
 );
 
-/* animación */
+/* animación 
 
 function draw(){
 
-  /* fondo */
+  /* fondo 
 
   const bg = ctx.createRadialGradient(
 
@@ -210,11 +210,11 @@ function draw(){
 
   const now = performance.now();
 
-  /* scroll */
+  /* scroll 
 
   const scrollY = window.scrollY;
 
-  /* estrellas */
+  /* estrellas 
 
   stars.forEach(s => {
 
@@ -241,7 +241,7 @@ function draw(){
 
       ) % (canvas.height + 100);
 
-    /* brillo */
+    /* brillo 
 
     s.twinklePhase += s.twinkleSpeed;
 
@@ -259,7 +259,7 @@ function draw(){
 
     ctx.save();
 
-    /* glow */
+    /* glow 
 
     if(s.r > 1){
 
@@ -301,7 +301,7 @@ function draw(){
 
     }
 
-    /* estrella */
+    /* estrella 
 
     ctx.fillStyle =
 
@@ -331,7 +331,7 @@ function draw(){
 
   });
 
-  /* fugaces */
+  /* fugaces 
 
   shooters = shooters.filter(
     sh => sh.alpha > 0
@@ -395,3 +395,5 @@ function draw(){
 }
 
 draw();
+
+*/
