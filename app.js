@@ -446,6 +446,8 @@ document.getElementById("navbar-container").innerHTML = navbar;
 
 */
 
+/*
+
 // 1. Detectar inteligentemente si la página actual está dentro de la carpeta "html"
 const isInHtmlFolder = window.location.pathname.includes('/html/');
 
@@ -496,6 +498,85 @@ const navbar = `
             </div>
         </div> 
     </header>
+`;
+
+document.getElementById("navbar-container").innerHTML = navbar;
+*/
+
+
+// Detectar si está en GitHub Pages o en localhost
+const isGitHubPages =
+  window.location.hostname.includes("github.io");
+
+// Ruta base del proyecto
+const base = isGitHubPages
+  ? "/Luselly-Hinestroza-Valencia-portafolio"
+  : "";
+
+// Navbar dinámico
+const navbar = `
+<header>
+    <div class="areglosnav">
+
+        <div class="menu-resP" id="menu-resP" onclick="menuResponse()">
+            ☰
+        </div>
+
+        <nav class="menu" id="menu">
+
+            <a href="${base}/index.html">
+                <img src="${base}/imagenes/inicio.png" alt="inicio">
+                Inicio
+            </a>
+
+            <div class="contenedorPortafolio">
+
+                <a class="itemMenu" href="${base}/html/portafolio.html">
+                    <img src="${base}/imagenes/portafolio.png" alt="portafolio">
+                    Portafolio
+                </a>
+
+                <iframe
+                    id="menuFrame"
+                    src="${base}/html/menuSeugundario.html">
+                </iframe>
+
+            </div>
+
+            <a href="${base}/html/acercaMi.html">
+                <img src="${base}/imagenes/acercademi.png" alt="acercaDeMi">
+                Acerca de mí
+            </a>
+
+            <a href="${base}/html/publicaciones.html">
+                <img src="${base}/imagenes/cv.png" alt="publicaciones">
+                Publicaciones
+            </a>
+
+            <a href="${base}/html/cv.html">
+                <img src="${base}/imagenes/cv.png" alt="cv">
+                Sección de CV
+            </a>
+
+        </nav>
+
+        <div class="cvlogo">
+
+            <a
+                href="${base}/imagenes/Desarrolladora Junior Full-Stack.docx (1).pdf"
+                download
+                class="btn-cv">
+                Descargar CV
+            </a>
+
+            <p class="nombre">
+                Luselly Hinestroza Valencia
+            </p>
+
+        </div>
+
+    </div>
+</header>
 `;
 
 document.getElementById("navbar-container").innerHTML = navbar;
