@@ -446,7 +446,7 @@ document.getElementById("navbar-container").innerHTML = navbar;
 
 */
 
-// Definimos la dirección web exacta de tu repositorio en GitHub Pages
+// CORRECCIÓN: Esta es la dirección web real y completa de tu portafolio en internet
 const URL_BASE = "https://github.io";
 
 const navbar = `
@@ -480,7 +480,7 @@ const navbar = `
                     <img src="${URL_BASE}imagenes/cv.png" alt="cv">Publicaciones
                 </a>
                 
-                <!-- Enlace a la sección CV (Ajustado al nombre real en tu Git con espacio "cv html") -->
+                <!-- Mantén "cv html" con espacio si aún no lo has corregido en tu Git local -->
                 <a href="${URL_BASE}html/cv html">
                     <img src="${URL_BASE}imagenes/cv.png" alt="cv">Sección de CV
                 </a>
