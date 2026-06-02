@@ -37,7 +37,7 @@ body{
 
 /* TARJETAS */
 .contenedorEstudios,
-.contenedorEsperiencia,
+.contenedorExperiencia,
 .contenedorHabilidad,
 .contenedorPublicaciones,
 .contenedorCards{
@@ -53,7 +53,7 @@ body{
 }
 
 .contenedorEstudios:hover,
-.contenedorEsperiencia:hover,
+.contenedorExperiencia:hover,
 .contenedorHabilidad:hover,
 .contenedorPublicaciones:hover,
 .contenedorCards:hover{
@@ -63,7 +63,7 @@ body{
 
 /* SUBTITULOS */
 .tituEstudios,
-.tituloEsperiencia,
+.tituloExperiencia,
 .tituloHabilidad,
 .tituloPublicaciones,
 .tituloCards{
@@ -71,7 +71,7 @@ body{
 }
 
 .tituEstudios h2,
-.tituloEsperiencia h2,
+.tituloExperiencia h2,
 .tituloHabilidad h2,
 .tituloPublicaciones h2,
 .tituloCards h2{
@@ -88,7 +88,7 @@ body{
 .grupoInputEstudios,
 .grupoInputEstudio,
 .grupoInputHabilidad,
-.grupoInputEsperiencia,
+.grupoInputExperiencia,
 .grupoInputCards,
 .grupoInput,
 .grupoInputPublicaciones,
@@ -217,7 +217,7 @@ textarea{
 
 /* BOTONES */
 .btnCrearEstudio,
-.btnCrearEsperiencia,
+.btnCrearExperiencia,
 .btnCrearHabilidad,
 .btnCrearPublicaciones,
 .btnCrearCards{
@@ -235,7 +235,7 @@ textarea{
 }
 
 .btnCrearEstudio:hover,
-.btnCrearEsperiencia:hover,
+.btnCrearExperiencia:hover,
 .btnCrearHabilidad:hover,
 .btnCrearCards:hover{
     transform: translateY(-3px);

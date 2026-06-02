@@ -206,87 +206,26 @@ body{
         0 0 9px rgba(209, 175, 243, 0.693);
 }
 
-/* ANIMACIONES */
-@keyframes aparecer{
-    from{
-        opacity: 0;
-    }
-
-    to{
-        opacity: 1;
-    }
+.adminC{
+    background-color: #000000;
+    width: 18px;
+    height: 18px;
+    border-radius: 20px;
+    position: fixed;      /* Lo deja encima de todo */
+    top: 46.50%;             /* Centro vertical */
+    left: 77.50%;            /* Centro horizontal */
+    transform: translate(-50%, -50%);
+    z-index: 9999;        /* Encima de los demás elementos */    
+    border: none;   
 }
 
-@keyframes subir{
-    from{
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px){
-
-    .inicioPrincipal{
-        padding: 120px 7% 80px;
-        text-align: center;
-    }
-
-    .contenidoInicio{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .textoPequeno{
-        letter-spacing: 4px;
-        font-size: 0.8rem;
-    }
-
-    .descripcionPrincipal{
-        text-align: center;
-    }
-
-    .botonesInicio{
-        justify-content: center;
-        width: 100%;
-    }
-
-    .botonProyecto{
-        width: 100%;
-        max-width: 320px;
-    }
-}
-
-/* RESPONSIVE */
-@media(max-width:950px){
-
-    .inicioPrincipal{
-        padding: 120px 8% 80px 8%;
-    }
-
-    .contenidoInicio{
-        width: 100%;
-    }
-
-    .tituloPrincipal{
-        width: 100%;
-
-        font-size: 3.5rem;
-    }
-
-    .descripcionPrincipal{
-        width: 100%;
-    }
-
-    .botonesInicio{
-        flex-wrap: wrap;
-    }
-
-    
+.adminC button{
+    width: 18px;
+    height: 18px;
+    border-radius: 20px;
+    position: fixed;      /* Lo deja encima de todo */
+    z-index: 9999;        /* Encima de los demás elementos */
+    background-color: #000000;
+    border: none;
+    cursor: default;
 }

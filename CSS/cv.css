@@ -60,7 +60,7 @@ body{
 /* CONTENIDO */
 .estidio{
     width: 100%;
-
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -223,9 +223,9 @@ body{
 
 
 
-/*ESPERIENCIA...........................................................................................*/
+/*ESPERIENCIA................................................................................................................*/
 
-.cajonEperiencia{
+.cajonExperiencia{
     width: 100%;
 
     margin-bottom: 120px;
@@ -238,7 +238,7 @@ body{
 }
 
 /* FONDO */
-.cajonEperiencia::before{
+.cajonExperiencia::before{
     content: "";
 
     width: 700px;
@@ -264,7 +264,7 @@ body{
 }
 
 /* TITULO */
-.cajonEperiencia h1{
+.cajonExperiencia h1{
     font-size: 4rem;
     font-weight: 900;
 
@@ -282,13 +282,14 @@ body{
 
 
 /* CONTENEDOR */
-.esperiencia{
+.experiencia{
     width: 100%;
 
     display: flex;
     flex-direction: column;
 
     gap: 35px;
+    margin-bottom: 20px;
 
     position: relative;
 
@@ -306,7 +307,7 @@ body{
 }
 
 /* EFECTO */
-.esperiencia::before{
+.experiencia::before{
     content: "";
 
     width: 250px;
@@ -324,12 +325,12 @@ body{
     transition: 0.5s ease;
 }
 
-.esperiencia:hover::before{
+.experiencia:hover::before{
     transform: scale(1.3);
 }
 
 /* SUBTITULO */
-.esperiencia h3{
+.experiencia h3{
     color: #d7b4ff;
 
     font-size: 1rem;
@@ -346,7 +347,7 @@ body{
 }
 
 /* TITULO */
-.esperiencia h2{
+.experiencia h2{
     color: white;
 
     font-size: 3rem;
@@ -366,7 +367,7 @@ body{
 }
 
 /* TEXTO */
-.esperiencia p{
+.experiencia p{
     width: 80%;
 
     color: #ddd4e8;
@@ -383,7 +384,7 @@ body{
 }
 
 /* LINEA ANIMADA */
-.esperiencia::after{
+.experiencia::after{
     content: "";
 
     width: 0%;
@@ -403,37 +404,11 @@ body{
     transition: 0.5s ease;
 }
 
-.esperiencia:hover::after{
+.experiencia:hover::after{
     width: 100%;
 }
 
-/* RESPONSIVE */
-@media(max-width:900px){
 
-    .cajonEperiencia{
-        min-height: auto;
-
-        padding: 70px 8%;
-    }
-
-    .cajonEperiencia h1{
-        font-size: 2.8rem;
-    }
-
-    .esperiencia{
-        padding: 35px 25px;
-    }
-
-    .esperiencia h2{
-        font-size: 2.5rem;
-
-        width: 100%;
-    }
-
-    .esperiencia p{
-        width: 100%;
-    }
-}
 
 
 /*ABILIDADES.............................................................................................*/
@@ -469,10 +444,10 @@ body{
 
 
 
-.Estudios{
+.habilidad{
     width: 100%;
     min-height: 220px;
-
+    padding-bottom: 80px;
     display: flex;
     flex-direction: column;
 
